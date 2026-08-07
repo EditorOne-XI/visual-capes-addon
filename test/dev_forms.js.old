@@ -1,0 +1,539 @@
+/****************************************************************************************************\
+| Visual Capes Add-on Developer Forms
+| - by EditorOne5312 | EditorOne XI - All rights reserved.
+|   $ Youtube: EditorOne XI
+|   $ Reddit: u/EditorOneXI
+|   $ GitHub: EditorOne-XI
+|   $ Modbay: EditorOne XI
+|   $ MCPEDL: EditorOne (Legacy Versions)
+| > IF DOWNLOADED FROM ANOTHER SITE BESIDES MY SOURCES, REPORT THE SITE IMMEDIATELY! (Indirectly to me)
+\****************************************************************************************************/
+
+import { ModalFormData } from '@minecraft/server-ui';
+import * as Minecraft from '@minecraft/server';
+import { raritySystem } from './config.js';
+import { Cape, permissionSwitch, cmdPlayerOnly, rawtext } from './common/constants.js';
+import { btoa, atob, commandFail, capeActiveFx, capeBuff } from './common/static.js';
+import { userReceiveCapeGift } from './common/deity.js';
+const { world, system, TicksPerSecond } = Minecraft;
+const dmNhRGV2RTFfWEk = "§e[Visual Capes Add-on Dev]§r";
+
+/**
+  * Plug this to VisualCapes.js to work:
+  * 
+  * import { dmNhRGV2RTFfWEk, runTimer, consoleMap } from 'dev_forms.js';
+  * 
+  * Uncomment the code block of if (dmNhRGV2RTFfWEk) { ... }
+  * Also plug this line to the manifest.json main bracket:
+  * 
+  * "capabilities": ["script_eval"],
+  */
+
+/**
+  * @remarks
+  * Test runCommand() if cheats are utilized.
+  */
+function safeCommand() {
+  try {
+    const theWorld = world.getDimension("overworld");
+    theWorld.runCommand('time set 2147483647');
+    theWorld.runCommand('time add -24000');
+    theWorld.runCommand('time set noon');
+  } catch (error) {
+    console.warn("Command failed. Are cheats enabled?");
+  }
+};
+
+/**
+  * @remarks
+  * Set a timer and call the callback during every seconds
+  * of the duration.
+  *
+  * @param {number} endSec
+  * @param {Function} callback
+  */
+function runTimer(endSec, callback) {
+  let currentSec = 0;
+  const tpsTime = system.runInterval(() => {
+    callback.call(null, currentSec);
+    if (currentSec >= endSec) {
+      system.clearRun(tpsTime);
+      return;
+    };
+    currentSec++;
+  }, TicksPerSecond);
+};
+
+/**
+ * @param {string | any[]} mainString
+ * @param {any[]} substrings
+ */
+function containsMatch(mainString, substrings) {
+  return substrings.some(sub => mainString.includes(sub));
+};
+
+/**
+ * @param {Minecraft.Player} player
+ */
+function formTest(player) {
+  if (player.typeId == 'minecraft:player') {
+    const playerTestForm = new ModalFormData()
+      .title('Player Test')
+      .textField('Input', 'Enter Something', { defaultValue: player.id });
+    playerTestForm.show(player).then(res => {
+      if (res.canceled) return;
+      const [input] = res.formValues;
+      let output = btoa(`${input}`);
+      const resultForm = new ModalFormData()
+        .title('Test Result')
+        .textField('Output', '', { defaultValue: output });
+      resultForm.show(player).then(res => {
+        if (res.canceled) return;
+      });
+    });
+  };
+};
+
+/**
+ * @param {Minecraft.Player} player
+ */
+function tagsListClipboard(player) {
+  const tagsListForm = new ModalFormData()
+    .title('Tags List Clipboard');
+  let tags = player.getTags();
+  tags.forEach(tag => {
+    tagsListForm.textField(atob(tag), tag, { defaultValue: tag });
+    tagsListForm.toggle('Remove', { defaultValue: false });
+  });
+  tagsListForm.show(player).then(res => {
+    if (res.canceled) return;
+    let t = 0;
+    for (let i = 1; i <= tags.length * 2 + 1; i+=2) {
+      if (res.formValues[i] == true) {
+        player.removeTag(tags[t]);
+      };
+      t++;
+    };
+  });
+};
+
+/**
+ * @param {Minecraft.Player} player
+ */
+function tagPlayerBase64(player) {
+  const tagFormBase64 = new ModalFormData()
+    .title('Add/Remove Player Tag')
+    .textField('Tag name', 'Enter Text', { defaultValue: '0' })
+    .toggle('Remove Tag', { defaultValue: false })
+    .toggle('Remove ALL Tags', { defaultValue: false })
+    .toggle('Include All Rarity Tags', { defaultValue: false })
+    .textField('Include Deity Cape Gift', 'Enter Text', { defaultValue: '' });
+  tagFormBase64.show(player).then(res => {
+    if (res.canceled) return;
+    const [tag, remove, removeAll, allRar, addDeity] = res.formValues;
+    let base64tag = btoa(`${tag}`);
+    if (removeAll) {
+      let tags = player.getTags();
+      tags.forEach(tag => {
+        player.removeTag(tag);
+      });
+    } else if (!remove) {
+      player.addTag(base64tag);
+      if (allRar) {
+        player.addTag(btoa(permissionSwitch.rarity.uncommon));
+        player.addTag(btoa(permissionSwitch.rarity.rare));
+        player.addTag(btoa(permissionSwitch.rarity.epic));
+        player.addTag(btoa(permissionSwitch.rarity.legendary));
+      };
+      if (typeof addDeity === "string" && containsMatch(addDeity, ['turnaround', 'eclipse', 'thunderstorm'])) {
+        player.addTag(btoa(permissionSwitch.rarity.deity));
+        userReceiveCapeGift(player, addDeity);
+      };
+    } else {
+      player.removeTag(base64tag);
+      if (allRar) {
+        player.removeTag(btoa(permissionSwitch.rarity.uncommon));
+        player.removeTag(btoa(permissionSwitch.rarity.rare));
+        player.removeTag(btoa(permissionSwitch.rarity.epic));
+        player.removeTag(btoa(permissionSwitch.rarity.legendary));
+      };
+      if (addDeity) {
+        player.removeTag(btoa(permissionSwitch.rarity.deity));
+      };
+    };
+  });
+};
+
+world.afterEvents.itemUse.subscribe(ev => {
+  let player = ev.source;
+  let itemType = ev.itemStack.typeId;
+  let itemName = ev.itemStack.nameTag;
+  system.run(() => {
+    if (itemType === 'minecraft:diamond' && itemName == 'Player') {
+      formTest(player);
+    };
+    if (itemType === 'minecraft:compass') {
+      tagPlayerBase64(player);
+    };
+    if (itemType === 'minecraft:emerald') {
+      tagsListClipboard(player);
+    };
+  });
+});
+
+// Custom Command Setup
+const { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus } = Minecraft;
+
+let cmdQueue = [];
+system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
+
+  // Dev Forms [!]
+  customCommandRegistry.registerEnum("vca:devopt", [
+    "form_test",
+    "tag_vca",
+    "tags_clipboard"
+  ]);
+  customCommandRegistry.registerCommand(
+    {
+      name: "vca:devforms",
+      description: "Equip or remove cape to your player.",
+      permissionLevel: CommandPermissionLevel.Host,
+      cheatsRequired: true,
+      mandatoryParameters: [
+        {
+          name: "vca:devopt",
+          type: CustomCommandParamType.Enum,
+        }
+      ],
+      optionalParameters: [
+        {
+          name: "vca:target",
+          type: CustomCommandParamType.PlayerSelector,
+        }
+      ]
+    },
+    (origin, devopt, target) => {
+      const source = origin.sourceEntity;
+      if (!(source instanceof Minecraft.Player))
+        return commandFail(cmdPlayerOnly);
+      system.run(() => {
+        try {
+          let access = target ?? source;
+          switch (devopt) {
+            case 'form_test':
+              formTest(access);
+              break;
+            case 'tag_vca':
+              tagPlayerBase64(access);
+              break;
+            case 'tags_clipboard':
+              tagsListClipboard(access);
+              break;
+            default: throw new Error(`${devopt} is not an option.`);
+          }
+        } catch (error) {
+          source.sendMessage(`§c${error.message}§r`);
+        }
+      });
+      return {
+        status: CustomCommandStatus.Success,
+        message: `§eUse of Developer's commands is prohibited.`
+      };
+    }
+  );
+
+  // stack + hold Command [!]
+  customCommandRegistry.registerCommand(
+    {
+      name: "vca:holdcmd",
+      description: "Can hold multiple commands and will be executed once with /stackcmd.",
+      permissionLevel: CommandPermissionLevel.Host,
+      cheatsRequired: true,
+      mandatoryParameters: [
+        {
+          name: "vca:command",
+          type: CustomCommandParamType.String
+        }
+      ],
+      optionalParameters: [
+        {
+          name: "vca:count",
+          type: CustomCommandParamType.Integer
+        }
+      ]
+    },
+    (origin, command, count) => {
+      const source = origin.sourceEntity;
+      if (!(source instanceof Minecraft.Player))
+        return commandFail(cmdPlayerOnly);
+      const regCount = count ?? 1;
+      system.run(() => {
+        try {
+          for (let i = 1; i <= regCount; i++) cmdQueue.push(command);
+          source.sendMessage(`§e/stackcmd - Command in queue: ${command} x${regCount}§r`);
+        } catch (e) {
+          source.sendMessage(`§c${e.message}§r`);
+        }
+      });
+      return { status: CustomCommandStatus.Success };
+    }
+  );
+  customCommandRegistry.registerCommand(
+    {
+      name: "vca:stackcmd",
+      description: "Repeat and/or run multiple commands.",
+      permissionLevel: CommandPermissionLevel.Host,
+      cheatsRequired: true,
+      mandatoryParameters: [
+        {
+          name: "vca:command",
+          type: CustomCommandParamType.String
+        }
+      ],
+      optionalParameters: [
+        {
+          name: "vca:repetition",
+          type: CustomCommandParamType.Integer
+        },
+        {
+          name: "vca:repeatAll",
+          type: CustomCommandParamType.Boolean
+        }
+      ]
+    },
+    (origin, command, repetition, repeatAll) => {
+      const source = origin.sourceEntity;
+      if (!(source instanceof Minecraft.Player))
+        return commandFail(cmdPlayerOnly);
+      const repCount = repetition ?? 1;
+      const repAll = repeatAll ?? false;
+      system.run(() => {
+        try {
+          cmdQueue.forEach(cmd => {
+            if (repAll) {
+              for (let hcmd = 1; hcmd <= repCount; hcmd++) source.runCommand(cmd);
+            } else {
+              source.runCommand(cmd);
+            }
+          });
+          cmdQueue = [];
+          for (let scmd = 1; scmd <= repCount; scmd++) source.runCommand(command);
+        } catch (e) {
+          source.sendMessage(`§c${e.message}§r`);
+        }
+      });
+      return { status: CustomCommandStatus.Success };
+    }
+  );
+
+  // Test All Capes [!]
+  customCommandRegistry.registerCommand(
+    {
+      name: "vca:equipall",
+      description: "Equip all capes registered in Visual Capes Add-on.",
+      permissionLevel: CommandPermissionLevel.Host,
+      cheatsRequired: true,
+      mandatoryParameters: [
+        {
+          name: "vca:interval",
+          type: CustomCommandParamType.Integer
+        }
+      ]
+    },
+    (origin, interval) => {
+      const source = origin.sourceEntity;
+      if (!(source instanceof Minecraft.Player))
+        return commandFail(cmdPlayerOnly);
+      if (Number.isNaN(interval) || interval < 1) {
+        return commandFail("Interval (in seconds) must be a natural number.");
+      }
+      system.run(() => {
+        try {
+          let allc = Cape.allList.map(c => c.type);
+          console.log(allc);
+          let i = 0;
+          const ceall = system.runInterval(() => {
+            if (i >= allc.length) {
+              //registerCapeEquip.unsubscribe(source);
+              source.triggerEvent("capes:remove_cape")
+              source.playSound("visualcapes.challenge_complete", { volume: 1, location: source.location });
+              source.sendMessage(`${source.name} has completed the challenge §4[Cape Collector!]§r`);
+              system.clearRun(ceall);
+              return;
+            }
+            console.log(i, allc[0], allc[i]);
+            source.triggerEvent(allc[i++]);
+            /*
+            let cape = allc[i++];
+            if (raritySystem.enabled) source.addTag(btoa(permissionSwitch.rarity[rarityNames.slice(1).map(r => r.toLowerCase())[cape.rarity_value - 1]]));
+            registerCapeEquip.subscribe(source, cape, raritySystem.survival_tweaks);
+            //i++;*/
+          }, TicksPerSecond * interval);
+        } catch (e) {
+          source.sendMessage(`§c${e.message}§r`);
+        }
+      });
+      return { status: CustomCommandStatus.Success };
+    }
+  );
+
+  // Cape Collector Test [!]
+  customCommandRegistry.registerEnum("vca:addorremove", ["add", "remove"]);
+  customCommandRegistry.registerCommand(
+    {
+      name: "vca:collector",
+      description: "Equip all capes registered in Visual Capes Add-on.",
+      permissionLevel: CommandPermissionLevel.Host,
+      cheatsRequired: true,
+      mandatoryParameters: [
+        {
+          name: "vca:addorremove",
+          type: CustomCommandParamType.Enum
+        }
+      ]
+    },
+    (origin, option) => {
+      const source = origin.sourceEntity;
+      if (!(source instanceof Minecraft.Player))
+        return commandFail(cmdPlayerOnly);
+      let opt0 = option;
+      if (option !== "remove") {
+        opt0 = "add";
+      }
+      system.run(() => {
+        try {
+          let allc = Cape.allList.map(c => btoa(c.type));
+          console.log(allc);
+          for (const ct of allc) {
+            if (opt0 == "add") source.addTag(ct);
+            else source.removeTag(ct);
+          }
+          //if (opt0 == "remove") source.setDynamicProperty(Cape.collector, undefined);
+          source.sendMessage(`Applied Collector [${opt0}]`);
+        } catch (e) {
+          source.sendMessage(`§c${e.message}§r`);
+        }
+      });
+      return { status: CustomCommandStatus.Success };
+    }
+  );
+
+  if (raritySystem.survival_tweaks) customCommandRegistry.registerCommand(
+    {
+      name: "vca:wizardmaterial",
+      description: "Register all buffs in Visual Capes Add-on Survival Tweaks.",
+      permissionLevel: CommandPermissionLevel.Host,
+      cheatsRequired: true,
+      mandatoryParameters: [
+        {
+          name: "vca:addorremove",
+          type: CustomCommandParamType.Enum
+        }
+      ]
+    },
+    (origin, option) => {
+      const source = origin.sourceEntity;
+      if (!(source instanceof Minecraft.Player))
+        return commandFail(cmdPlayerOnly);
+      let opt0 = option;
+      if (option !== "remove") {
+        opt0 = "add";
+      }
+      system.run(() => {
+        try {
+          let allbuffnc = capeBuff.effects.filter(e => e.legendarybuff !== "custom").map(e => e.type);
+          console.log(allbuffnc);
+          for (const bt of allbuffnc) {
+            if (opt0 == "add") source.addTag(btoa(`${capeActiveFx}-${bt}-9`));
+            else source.removeTag(btoa(`${capeActiveFx}-${bt}-9`));
+          }
+          source.sendMessage(`Applied Wizard Material [${opt0}]`);
+        } catch (e) {
+          source.sendMessage(`§c${e.message}§r`);
+        }
+      });
+      return { status: CustomCommandStatus.Success };
+    }
+  );
+
+  customCommandRegistry.registerCommand(
+    {
+      name: "vca:setinv",
+      description: "Replace all slots with a specific item.",
+      permissionLevel: CommandPermissionLevel.Host,
+      cheatsRequired: true,
+      mandatoryParameters: [
+        {
+          name: "vca:item",
+          type: CustomCommandParamType.ItemType
+        },
+        {
+          name: "vca:count",
+          type: CustomCommandParamType.Integer
+        }
+      ],
+      optionalParameters: [
+        {
+          name: "vca:target",
+          type: CustomCommandParamType.PlayerSelector
+        }
+      ]
+    },
+    /**
+    * @param {Minecraft.ItemType} itemType
+    */
+    (origin, itemType, amount, target) => {
+      const source = target ?? origin.sourceEntity;
+      if (!(source instanceof Minecraft.Player))
+        return commandFail(cmdPlayerOnly);
+      system.run(() => {
+        try {
+          let inv = source.getComponent(Minecraft.EntityComponentTypes.Inventory);
+          let container = inv?.container;
+          if (!inv || !container) return source.sendMessage("No iventory found.");
+          let slot;
+          for (let i = 0; i < 36; i++) {
+            slot = container.getSlot(i);
+            if (!slot) return source.sendMessage(`${source.name} has no Inventory Slot ${i}. Stopped at ${amount * i}.`);
+            slot.setItem(new Minecraft.ItemStack(itemType.id, amount));
+          }
+          source.sendMessage(rawtext.format([
+            rawtext.text(`Successfully added ${amount * 36} `),
+            rawtext.lang(itemType.localizationKey),
+            rawtext.text(` to inventory. [${amount} p/slot]`)
+          ]));
+        } catch (e) {
+          source.sendMessage(`§c${e.message}§r`);
+        }
+      });
+      return { status: CustomCommandStatus.Success };
+    }
+  );
+
+  // add
+});
+
+/* ----------------------------------------------------------------------------------------------------
+-> VisualCapes.js Dev Commands
+   ( via customCommandRegistry )
+
+//
+
+// ---------------------------------------------------------------------------------------------------- */
+
+/**
+  * @remarks
+  * Logs the data of a Map.
+  *
+  * @param {Minecraft.Player} player
+  * @param {Map<any, any> | any} mapInstance
+  */
+function consoleMap(player, mapInstance) {
+  if (!(mapInstance instanceof Map)) player.sendMessage('Not a map.');
+  let mapData = JSON.stringify(Object.fromEntries(mapInstance), undefined, 2);
+  player.sendMessage(`Map console:\n${mapData}`);
+};
+
+export { dmNhRGV2RTFfWEk, safeCommand, runTimer, consoleMap };
+//console.error(eval(new String('"script_eval" support enabled. Be aware of this to not cause chaos!')));
+console.warn('"dev_forms.js" loaded successfully.');

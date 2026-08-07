@@ -1,0 +1,36 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Made by EditorOne5312 - v2.6.0 - Note: This Resource Pack doesn't support utility packs, cosmetics packs, packs that uses 'player.entity.json' file, packs that modifies cape & elytra rendering. If you really want to merge this pack then do it manually. Since this is a Resource Pack only, you can add this to your Global Resource Packs then hope lol.",
+    "name": "§bVisual Capes Addon §eRP Only!§r",
+    "uuid": "d082cf85-58ce-42e8-bc02-a8c5fe97ff48",
+    "version": [ 2, 6, 0 ],
+    "min_engine_version": [ 1, 26, 30 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "0c36aa5f-c278-4616-88de-41ec4ed54db1",
+      "version": [ 2, 6, 0 ]
+    }
+  ],
+  "subpacks": [
+    {
+      "folder_name": "null",
+      "memory_tier": 1,
+      "name": "\n§cEmpty, will not work if selected.§r"
+    },
+    {
+      "folder_name": "default",
+      "memory_tier": 1,
+      "name": "\n§eDefault§r"
+    }
+  ],
+  "settings": [
+    {
+      "type": "label",
+      "text": "Compatible Minecraft Versions for Visual Capes Add-on v2.6.0. This Add-on might break in the future Minecraft Versions, let me know about it in my YouTube @EditorOneXI :D"
+    }
+  ],
+  "capabilities": [ "pbr" ]
+}

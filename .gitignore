@@ -1,0 +1,33 @@
+# respect ignores
+# references / extensions
+*README.txt
+/_templates/
+LICENSE.txt
+VisualCapesAddon1.21(v2.0.0)/
+bundle/VisualCapesBP/functions/*/
+bundle/node_modules/
+bundle/package-lock.json
+
+# Strict: Minecraft EULA
+bundle/VisualCapesRP/sounds/visualcapes/
+bundle/VisualCapesRP/textures/capes/
+bundle/VisualCapesRP/textures/particle/
+
+# testings
+/elytra.json
+/elytra.render_controllers.json
+/*.player.json
+/player.entity*.json
+_graphics/
+_vanilla/
+temp/
+bundle*.*
+bundle/VisualCapesExt/scripts/dev_forms.js
+Visual-Capes-Addon_*.mcaddon
+Visual-Capes-Addon_*.mcpack
+*.bundle
+
+# temp files
+/changelog.txt
+/updateList.txt
+log.txt
