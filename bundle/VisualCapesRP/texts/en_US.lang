@@ -1,0 +1,216 @@
+## ----------------------------------------------------------------------------------------------------
+## Visual Capes Add-on Minecraft Language File
+## - by EditorOne5312 | EditorOne XI - All rights reserved.
+##   $ Youtube: EditorOne XI
+##   $ Reddit: u/EditorOneXI
+##   $ GitHub: EditorOne-XI
+##   $ Modbay: EditorOne XI
+##   $ MCPEDL: EditorOne (Legacy Versions)
+## > IF DOWNLOADED FROM ANOTHER SITE BESIDES MY SOURCES, REPORT THE SITE IMMEDIATELY! (Indirectly to me)
+## ----------------------------------------------------------------------------------------------------
+
+## Language Translation File
+## (English - United States)
+
+## If you want to translate all of these,
+## please dm me so I can fact-check them
+## and give you credit if it is published :D
+
+## NOTE: Some texts cannot be translated because
+## they are either inside of the script, they
+## are using escape characters, or they are not
+## supposed to be renamed.
+
+potion.potency.0=I
+potion.potency.1=II
+potion.potency.2=III
+potion.potency.3=IV
+potion.potency.4=V
+potion.potency.5=VI
+potion.potency.6=VII
+potion.potency.7=VIII
+potion.potency.8=IX
+potion.potency.9=X
+potion.potency.255=(Deity)
+
+visualcapesaddon.capeRarity.title=Cape Rarity
+visualcapesaddon.capeRarity.description=Cape rarities are used to visualize how many people own the cape and how often you can see players wearing it. The Pan Cape is the most common cape you can ever see anytime, while the Bacon Cape is only owned by one player named Miclee because of his idea of a Pigman. (even if it's removed later, it's still the rarest cape of all time)
+visualcapesaddon.raritySystem.title=Rarity System
+visualcapesaddon.raritySystem.descriptionAbout=This is an extension where cape rarities are actually going to be a rarity in-game where you have less access to the capes that you can choose, but when you get the privilege to equip a 'rare' cape, you can now enjoy and flex it with other players.
+visualcapesaddon.raritySystem.descriptionDefaults=The default Rarity System only reduces your access to capes where operators/admins have the ability to give you a cape or a rarity.
+visualcapesaddon.raritySystem.description.menu=To open the Capes Menu, get yourself a pumpkin pie and rename it to the anvil as "Cape Selector".  After renaming, you can now start choosing your capes! Cape Selector is still available when the rarity system is turned off.
+visualcapesaddon.raritySystem.description.opmenu=To have access to the Operator's Menu, you can use this custom command; both add and remove operators are available.
+visualcapesaddon.raritySystem.description.opmenu2=This is how the operator's menu looks; the two methods you can see are already labeled inside the menu.
+visualcapesaddon.raritySystem.description.opmenu3=Operators of Cape Menu can deliver any player with any cape or rarity privilege. This is what it should look like when you receive a cape from an operator.
+
+
+visualcapesaddon.about.description.start=Welcome to Visual Capes Add-on! This add-on allows you to equip one of the capes available that you want, and each player can have their own cape equipped too! There are different cape designs you can choose from, and you can also see its exclusive elytra texture when wearing an elytra.
+visualcapesaddon.about.title.features=Features
+visualcapesaddon.about.title.getStarted=Get Started
+visualcapesaddon.about.description.getStarted=To start your first journey with this add-on, go back and click the 'Start' button, then choose one of the known capes given to the community.
+visualcapesaddon.about.description.alreadyStarted=If you are already started, choose a tab shown above.
+
+visualcapesaddon.about.title.equipCape=Equipping a Cape
+visualcapesaddon.about.description.equipCape=In this add-on, you can choose what cape you want to equip via commands. It means that if you have access to commands, you can equip or change your cape. You can use either the /event or /function commands.
+visualcapesaddon.about.description.equipCape_player=If you are going to apply a cape to another player, you can use either one of these commands:
+visualcapesaddon.about.title.capeElytra=Cape with Elytra
+visualcapesaddon.about.description.capeElytra=If you equipped one of the capes, you will see that your elytra changed its texture too! (Each cape has its own different elytra texture; some have none; see Capes Tab.)
+visualcapesaddon.about.title.removeCape=Removing Cape
+visualcapesaddon.about.description.removeCape=If you want to remove your cape, you can use one of these specific /event or /function commands:
+visualcapesaddon.about.description.removeCape_player=If you want to remove another player's cape, you can use one of these specific /event or /execute ... function commands:
+
+visualcapesaddon.capesList.description=Here is the list of the Capes you can use. You can see their namespace:name (in-game name for commands use) under their Cape name. (Click the Cape icon to see their Elytra texture, some of them have none, so they use the default texture instead.)
+
+visualcapesaddon.rarity_survival.title=Rarity System with Survival Tweaks
+visualcapesaddon.rarity_survival.description1=In this mode, you are able to get unlimited effect duration buffs or activate unique buffs during your survival journey! It allows you to be stronger than before, where you can no longer fear such dangerous situations or battles.
+visualcapesaddon.rarity_survival.description2=Note that your active buffs will be gone when you die.
+visualcapesaddon.rarity_survival.description3=To get a buff, you need to name any item as "Reward Convert" and have the specific item requirements to register your buffs. Use the "Reward Convert" bottle to open its options. Buffs only activate when you equip a cape that has the same rarity as the buffs you have registered.
+visualcapesaddon.rarity_survival.description.register=When you register a buff, it will be displayed in the Capes menu, and you can see what buffs are going to be applied when you equip a cape.
+visualcapesaddon.rarity_survival.header.items=Item Tweaks
+visualcapesaddon.rarity_survival.description.enchantedapple=Enchanted Golden Apple can now be crafted, but you actually need to have at least two (2) of them to duplicate one (1). The recipe is shown below.
+visualcapesaddon.rarity_survival.description.heavycore=Heavy Core can now be obtained in a different way! This is only possible when a player has a buff with an amplifier higher than seven (7). If they die from an explosion, they will drop a Heavy Core, even if they do not have one in their inventory.
+visualcapesaddon.rarity_survival.header.customBuffs=Custom Buffs
+visualcapesaddon.rarity_survival.description.customBuffs=Custom Buffs, or Unique Buffs, are the buffs that require and consume Heavy Core in your inventory to activate. Most of these buffs cannot be amplified because they are fixed to what they do to the affected entities, players, or yourself. There are currently only five (5) custom buffs available.
+visualcapesaddon.rarity_survival.description.cursebinding=All entities within thirty-two (32) blocks will be frozen to their current position, but you will get a permanent darkness effect; both effects only last sixty (60) seconds.
+visualcapesaddon.rarity_survival.description.instantrecover1=Instead of using the normal Instant Heal effect, this buff boosts your regeneration and max health for ninety (90) seconds to make it more difficult to get killed.
+visualcapesaddon.rarity_survival.description.instantrecover2=Note: This does not prevent you from getting killed by the Self Destruct buff.
+visualcapesaddon.rarity_survival.description.netherdomain1=This buff brings every player within sixteen (16) blocks to the nether roof. The casting player sends a ring of fire every seven and a half (7.5) seconds, burning all their victims. If one player dies in the domain, all players from the domain will get teleported back to the overworld's height limit, having a chance to die from fall damage instead.
+visualcapesaddon.rarity_survival.description.netherdomain.knownissue=Known Issues
+visualcapesaddon.rarity_survival.description.netherdomain2=If no one is a victim of the buff, you need to leave the game and join to automatically escape the domain, but you are not getting teleported back to the overworld.
+visualcapesaddon.rarity_survival.description.netherdomain3=When a player leaves the game, even if they are not inside the domain. All players from the domain will be teleported back to the overworld.
+visualcapesaddon.rarity_survival.description.selfdestruct=This buff instantly explodes you, dealing seven hundred fifty (750) damage to surrounding players within twenty-five (25) block radius (1500 damage from entities). And players within fifty (50) block radius will be set on fire for thirty (30) minutes if not extinguished.
+visualcapesaddon.rarity_survival.description.windpulse=This buff, when active, makes you immune to fall damage and pushes nearby entities upward. Push level is scaled by fall height. Mace cannot stack damage when this buff is active. You can make this buff inactive by sneaking.
+visualcapesaddon.rarity_survival.reward.title=Item Requirements Per Rarity
+
+
+## ----------------------------------------------------------------------------------------------------
+##    <<< Visual Capes Script Extension Texts >>>
+## ----------------------------------------------------------------------------------------------------
+
+## If the button.<> have two hash,
+## means they use what Minecraft already have at .lang
+## Check constants.js:buttonText
+vcascript.form.button.accept=Accept ##
+vcascript.form.button.apply=Apply ##
+vcascript.form.button.back=Back ##
+vcascript.form.button.cancel=Cancel ##
+vcascript.form.button.decline=Decline ##
+vcascript.form.button.edit=Edit ##
+vcascript.form.button.equip=Equip ##
+vcascript.form.button.exit=Exit ##
+vcascript.form.button.goBack=Go Back ##
+vcascript.form.button.info=More Info ##
+vcascript.form.button.no=No ##
+vcascript.form.button.none=None ##
+vcascript.form.button.register=Register
+vcascript.form.button.reject=No Thanks
+vcascript.form.button.save=Save ##
+vcascript.form.button.skip=Skip ##
+vcascript.form.button.start=Start ##
+vcascript.form.button.unequip=Remove Cape
+vcascript.form.button.yes=Yes ##
+
+vcascript.form.config.description1=A startup configuration of the Add-on before you start.
+vcascript.form.config.description2=Note that this cannot be changed after setup.
+vcascript.form.config.scriptCheck1=NOTE: Do not enable it if you do not want cluttered logs.
+vcascript.form.config.scriptCheck2=If enabled, print every action log to the console or in your chat.
+vcascript.form.config.capeCollector=Cape Collector is an add-on challenge obtainable when a player equipped every cape available.
+
+vcascript.form.rarityconfig.damage1=If enabled, players will receive amplified damage that has %s seconds cooldown.
+vcascript.form.rarityconfig.damage2=This only triggers when a player has greater than or equal to half their health.
+vcascript.form.rarityconfig.damage3=A player attacking another player will not trigger this effect.
+vcascript.form.rarityconfig.damage4=Calculated with: %s
+vcascript.form.rarityconfig.damage5=If unset, default for amp = %s
+vcascript.form.rarityconfig.damageAmp1=Adjust the incremental days interval for the world.
+vcascript.form.rarityconfig.damageAmp2=This is the "%s" for Damage State %s
+
+vcascript.achievement.default=%s has made the achievement %s
+vcascript.achievement.goal=%s has reached the goal %s
+vcascript.achievement.challenge=%s has completed the challenge %s
+
+vcascript.form.achievement.description=These are Visual Capes Add-on achievements that can be obtained with the current settings.
+vcascript.achievement.starter.description=Equip a cape from the Starter Capes.
+vcascript.achievement.first_rarity.description=Equip any cape that is not a %1$s Rarity.
+vcascript.achievement.first_legendary.description=Equip any cape that is higher than %2$s Rarity.
+vcascript.achievement.rarity_collector.description=Equip all cape rarities.
+vcascript.achievement.cape_collector.description=Equip all registered capes.
+vcascript.achievement.first_buff.description=Grant yourself a buff when you equip a cape.
+vcascript.achievement.all_buffs.description=???
+vcascript.achievement.sacrifice.description=???
+vcascript.achievement.deity_weakness.description=Prove it.
+vcascript.achievement.deity_fall.description=Unequip a %3$s Rarity Cape.
+
+vcascript.form.startup1=Welcome to %s!
+vcascript.form.startup2=This is the add-on where you can equip any capes you want! Go to "%s" for more details.
+
+vcascript.form.cancellation.title=Not Interested?
+vcascript.form.cancellation1=Visual Capes Add-on gives you an opportunity to choose a cape you desire with this menu more efficiently with %s capes designs in total.
+vcascript.form.cancellation2=Are you sure you want to leave Visual Capes Add-on Menu?
+vcascript.form.cancellation3=This will also reduce your chance of getting overpowered buffs for your survival journey.
+vcascript.form.cancellation4=If you really want to close this for the moment, click "Go Back", then click "Skip" and you can leave it without canceling this menu.
+
+vcascript.message.cancellation1=You can no longer access Visual Capes Menu. If you think this is a mistake, then run this command:
+vcascript.message.cancellation2=If you do not have permission to use commands, request it to the host/admin of the server.
+
+vcascript.form.startercapes1=Choose one of the rare capes Minecraft introduced to the community! Choose wisely!
+vcascript.form.startercapes2=If you do not want to equip one of these, you can click "%s" to continue.
+
+## Correct sentence structure for English
+## .<classification>.rarity only adds 'accessible' after the %s count placeholder;
+vcascript.form.capes.vanilla=Select one of %s designed capes by Mojang/Microsoft that is given to the community, a selected group of people, or to participants who contributed to the game.
+vcascript.form.capes.vanilla.rarity=Select one of %s accessible designed by Mojang/Microsoft that is given to the community, a selected group of people, or to participants who contributed to the game.
+vcascript.form.capes.customPreset=Select one of %s designed capes available.
+vcascript.form.capes.customTemplate=Select one of %s customized capes available.
+vcascript.form.capes.customPreset.rarity=Select one of %s accessible designed capes available.
+vcascript.form.capes.customTemplate.rarity=Select one of %s accessible customized capes available.
+vcascript.form.capes.aprilFools=Select one of %s joke capes that are exclusive to Java Edition's April Fools snapshot update(s).
+vcascript.form.capes.aprilFools.rarity=Select one of %s accessible joke capes that are exclusive to Java Edition's April Fools snapshot update(s).
+
+vcascript.form.menu=Select a classification for the capes to choose.
+vcascript.form.menudefault=Select a classification for the capes to choose. If you want to remove your cape, just click the "%s" button.
+vcascript.form.menuoperator=Select a method to use.
+vcascript.form.menuoperator.capes=Gives a specific cape to a player. This is the only way to equip the cape you want, since you cannot access the normal menu.
+vcascript.form.menuoperator.rarity=Gives a rarity privilege to a player for them to choose their cape. Do not use this for yourself if you are keeping the operator's menu.
+vcascript.form.menuoperator.classification1=%s - will be applied directly to the player.
+vcascript.form.menuoperator.classification2=Disregards the options below.
+vcascript.form.menuoperator.sort=This will not affect %s sorting.
+vcascript.form.menuoperator.target=Select a cape for the desired target: %s
+vcascript.form.menuoperator.locked.title=List is Empty
+vcascript.form.menuoperator.locked=No cape rarity unlocked from the options. Do you want to return to the menu?
+
+vcascript.message.menuoperator.rarity.take=%s took your privilege to choose %s Rarity Cape from the Capes Menu.
+vcascript.message.menuoperator.rarity.give=%s gave you a privilege to choose %s Rarity Cape from the Capes Menu.
+vcascript.message.menuoperator.rarity.takeAll=%s took your privilege to choose any Rarity Cape from the Capes Menu.
+vcascript.message.menuoperator.rarity.giveAll=%s gave you privilege to choose any Rarity Cape from the Capes Menu.
+
+## Correct sentence structure for English
+## .equip.rarity does not have 'the' because the rarity name is displayed besides the cape name;
+vcascript.form.sendpopup.equip.title=Received %s
+vcascript.form.sendpopup.equip=You have received the %2$s from %1$s. Do you want to accept it?
+vcascript.form.sendpopup.equip.rarity=You have received %3$s from %1$s. Do you want to accept it?
+vcascript.form.sendpopup.buff=This will trigger your stored buffs depending on its rarity.
+vcascript.form.sendpopup.unequip.title=Remove your cape.
+vcascript.form.sendpopup.unequip=A request sent from %1$s, they might want to remove your current equipped cape. Do you want to accept this request?
+
+vcascript.message.equip.accept=%s claimed the %s!
+vcascript.message.equip.reject=%s did not claim the cape.
+vcascript.message.unequip.accept=%s removed their cape.
+vcascript.message.unequip.reject=%s did not accept your request.
+
+vcascript.form.buffamplifier=Buff amplifier requires higher rarity per %s levels increase.
+vcascript.form.buffamplifier.custombuffs=Amplifier will not affect Custom Buffs.
+vcascript.form.storedbuffs1=Stored Buffs:
+vcascript.form.storedbuffs2=Activates simultaneously depending on the rarity of the cape to be equipped:
+vcascript.message.reward.insufficient=Requirements did not met for this option:
+vcascript.message.reward.mismatch=The chosen rarity does not support your options.
+vcascript.message.reward.success=Reward has been registered.
+
+vcascript.form.gift.unlocked=You have received a %s rarity, take the cape or you will miss it forever. Note that this can only be obtained once.
+vcascript.form.gift.hiddenbuffs=These buffs are hidden from any display indicating an indicator of the player's active buffs.
+vcascript.message.gift.transfer=Transfering reward in %s seconds
+vcascript.message.gift.notarget=No target accumulated.
+vcascript.message.gift.teleport.nolocation=Specify a location first before using this ability.
+vcascript.message.gift.settings.cancel=Settings Cancelled.
+vcascript.message.gift.command.badaxis=Expected a number from %1$s-axis. Invalid input: %2$s
+vcascript.message.gift.voidtimer=You stayed in the void for %s!
+vcascript.message.gift.instantbreak.fail=I am not built for this?

@@ -1,0 +1,57 @@
+/****************************************************************************************************\
+| Visual Capes Add-on UI Settings Screen
+| - by EditorOne5312 | EditorOne XI - All rights reserved.
+|   $ Youtube: EditorOne XI
+|   $ Reddit: u/EditorOneXI
+|   $ GitHub: EditorOne-XI
+|   $ Modbay: EditorOne XI
+|   $ MCPEDL: EditorOne (Legacy Versions)
+| > IF DOWNLOADED FROM ANOTHER SITE BESIDES MY SOURCES, REPORT THE SITE IMMEDIATELY! (Indirectly to me)
+\****************************************************************************************************/
+{
+  "selector_stack_panel/spacer_0": {
+    "ignored": false
+  },
+
+  "selector_stack_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "spacer_visual_capes": {
+              "ignored": "(not $include_world_section)",
+              "type": "panel",
+              "size": [ 2, 2 ]
+            }
+          },
+          {
+            "about_visual_capes_settings_button@capes_common_ui.about_visual_capes_settings_button": {
+              "$toggle_group_forced_index": 512
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "section_content_panels": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "about_visual_capes_main_section@capes_ui.about_visual_capes_main_section": {
+              "ignored": "(not $include_controls_and_settings_sections)",
+              "$info_tab_default_index": 1,
+              "$settings_section": true,
+              "visible": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

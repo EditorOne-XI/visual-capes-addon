@@ -36,7 +36,7 @@ To gain access to the **Operator's Cape Menu**, use this custom command provided
 
 * Restarting a menu also included with this command.
 * The "Cape Selector" Pumpkin Pie utilizes the operator's menu when granted permission.
-* The `/cape` command is still accessible as it is. To open the Operator's menu, use `/opcape menu` command instead.
+* The `/opcape menu` command will override `/cape` when Operator's Cape Menu is accessible.
 
 This is how the operator's menu looks; the two methods you can see are already labeled inside the menu.
 

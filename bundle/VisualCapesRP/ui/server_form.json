@@ -1,0 +1,271 @@
+/****************************************************************************************************\
+| Visual Capes Add-on UI Server Forms
+| - by EditorOne5312 | EditorOne XI - All rights reserved.
+|   $ Youtube: EditorOne XI
+|   $ Reddit: u/EditorOneXI
+|   $ GitHub: EditorOne-XI
+|   $ Modbay: EditorOne XI
+|   $ MCPEDL: EditorOne (Legacy Versions)
+| > IF DOWNLOADED FROM ANOTHER SITE BESIDES MY SOURCES, REPORT THE SITE IMMEDIATELY! (Indirectly to me)
+\****************************************************************************************************/
+{
+  "server_form_padding": {
+    "type": "panel",
+    "$formPadding|default": [ "100%", 4 ],
+    "size": "$formPadding"
+  },
+
+  "main_screen_content/server_form_factory": {
+    "control_ids": {
+      "long_form": "@server_form.long_form_iterator",
+      "custom_form": "@server_form.custom_form"
+    }
+  },
+  
+  "long_form_iterator": {
+    "type": "panel",
+    "controls": [
+      {
+        "long_form_default@server_form.long_form": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#title_text - 'About Visual Capes Add-on') = #title_text) and ((#title_text - 'Visual Capes Add-on Achievements') = #title_text) and ((#title_text - 'Item AUX List') = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "visual_capes_addon_form@common_dialogs.main_panel_no_buttons": {
+          "$title_panel": "common_dialogs.standard_title_label",
+          "$title_size": [ "100% - 14px", 10 ],
+          "size": [300, 225],
+          "$text_name": "About Visual Capes Add-on",
+          "$title_text_binding_type": "none",
+          "$child_control": "server_form.visual_capes_addon_panel",
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(#title_text = 'About Visual Capes Add-on')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "visual_capes_addon_achievements_form@common_dialogs.main_panel_no_buttons": {
+          "$title_panel": "common_dialogs.standard_title_label",
+          "$title_size": [ "100% - 14px", 10 ],
+          "size": [300, 225],
+          "$text_name": "Visual Capes Add-on Achievements",
+          "$title_text_binding_type": "none",
+          "$child_control": "server_form.long_form_panel",
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(#title_text = 'Visual Capes Add-on Achievements')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "item_ids_form@common_dialogs.main_panel_no_buttons": {
+          "$title_panel": "common_dialogs.standard_title_label",
+          "$title_size": [ "100% - 14px", 10 ],
+          "size": [300, 225],
+          "$text_name": "Item AUX List",
+          "$title_text_binding_type": "none",
+          "$child_control": "server_form.item_ids_panel",
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(#title_text = 'Item AUX List')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "visual_capes_addon_panel": {
+    "type": "stack_panel",
+    "size": ["100%", "100%"],
+    "orientation": "vertical",
+    "layer": 1,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "scrolling_panel@common.scrolling_panel": {
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "$show_background": false,
+          "size": [ "100%", "100%" ],
+          "$scrolling_content": "server_form.visual_capes_addon_scrolling_content",
+          "$scroll_size": [ 5, "100% - 4px" ],
+          "$scrolling_pane_size": [ "100% - 4px", "100% - 2px" ],
+          "$scrolling_pane_offset": [ 2, 0 ],
+          "$scroll_bar_right_padding_size": [ 0, 0 ]
+        }
+      }
+    ]
+  },
+
+  "visual_capes_addon_scrolling_content": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "padding1@server_form.server_form_padding": {}
+      },
+      {
+        "about_visual_capes_main_section@capes_ui.about_visual_capes_main_section": {}
+      },
+      {
+        "padding2@server_form.server_form_padding": {}
+      },
+      {
+        "wrapping_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "long_form_dynamic_buttons_panel@server_form.long_form_dynamic_buttons_panel": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "item_ids_panel": {
+    "type": "stack_panel",
+    "size": ["100%", "100%"],
+    "orientation": "vertical",
+    "layer": 1,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "scrolling_panel@common.scrolling_panel": {
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "$show_background": false,
+          "size": [ "100%", "100%" ],
+          "$scrolling_content": "server_form.item_ids_scrolling_content",
+          "$scroll_size": [ 5, "100% - 4px" ],
+          "$scrolling_pane_size": [ "100% - 4px", "100% - 2px" ],
+          "$scrolling_pane_offset": [ 2, 0 ],
+          "$scroll_bar_right_padding_size": [ 0, 0 ]
+        }
+      }
+    ]
+  },
+
+  "item_ids_scrolling_content": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "paddingStart@server_form.server_form_padding": {}
+      },
+      {
+        "item_ids_section": {
+          "type": "stack_panel",
+          "size": [ "100% - 4px", "100%c + 2px" ],
+          "controls": [
+            { "itemID_test_stack_panel@capes_common_ui.itemID_test_stack_panel": { "visible": true } }
+          ]
+        }
+      },
+      {
+        "paddingEnd@server_form.server_form_padding": {}
+      }
+    ]
+  },
+
+  "dynamic_button/form_button": {
+    "ignored": "((#title_text = 'Visual Capes Add-on Achievements'))"
+  },
+
+  "dynamic_button": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "form_button_dark_display@common_buttons.dark_text_button": {
+              "ignored": "((#title_text - 'Visual Capes Add-on Achievements') = #title_text)",
+              "layer": 30,
+              "$pressed_button_name": "button.form_button_click",
+              "$default_button_texture": "textures/ui/button_borderless_dark",
+              "$hover_button_texture": "textures/ui/button_borderless_dark",
+              "$pressed_button_texture": "textures/ui/button_borderless_dark",
+              "anchor_from": "top_left",
+              "anchor_to": "top_left",
+              "size": [ "fill", 32 ],
+              "$button_text": "#form_button_text",
+              "$button_text_binding_type": "collection",
+              "$button_text_grid_collection_name": "form_buttons",
+              "$button_text_max_size": [ "100%", 20 ],
+              "bindings": [
+                {
+                  "binding_type": "collection_details",
+                  "binding_collection_name": "form_buttons"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "custom_form_scrolling_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "rarity_survival_tweaks_rewards_requirements": {
+              "type": "stack_panel",
+              "size": [ "100%", "100%c" ],
+              "bindings": [
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(#title_text = 'Cape Rarity Reward')",
+                  "target_property_name": "#visible"
+                }
+              ],
+              "controls": [
+                {
+                  "paddingStart@server_form.server_form_padding": {}
+                },
+                {
+                  "rst_rewards_requirements@capes_ui.rst_rewards_requirements": {}
+                },
+                {
+                  "paddingEnd@server_form.server_form_padding": {}
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

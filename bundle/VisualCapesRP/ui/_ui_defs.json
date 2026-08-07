@@ -1,0 +1,16 @@
+/****************************************************************************************************\
+| Visual Capes Add-on UI Definitions
+| - by EditorOne5312 | EditorOne XI - All rights reserved.
+|   $ Youtube: EditorOne XI
+|   $ Reddit: u/EditorOneXI
+|   $ GitHub: EditorOne-XI
+|   $ Modbay: EditorOne XI
+|   $ MCPEDL: EditorOne (Legacy Versions)
+| > IF DOWNLOADED FROM ANOTHER SITE BESIDES MY SOURCES, REPORT THE SITE IMMEDIATELY! (Indirectly to me)
+\****************************************************************************************************/
+{
+  "ui_defs": [
+    "ui/capes.ui",
+    "ui/capes_common.ui"
+  ]
+}

@@ -1,0 +1,53 @@
+/****************************************************************************************************\
+| Visual Capes Add-on UI Head-Up Display (HUD) Screen
+| - by EditorOne5312 | EditorOne XI - All rights reserved.
+|   $ Youtube: EditorOne XI
+|   $ Reddit: u/EditorOneXI
+|   $ GitHub: EditorOne-XI
+|   $ Modbay: EditorOne XI
+|   $ MCPEDL: EditorOne (Legacy Versions)
+| > IF DOWNLOADED FROM ANOTHER SITE BESIDES MY SOURCES, REPORT THE SITE IMMEDIATELY! (Indirectly to me)
+\****************************************************************************************************/
+{
+  "visualcapesaddon_hud_display": {
+    "type": "image",
+    "ignored": "(not $show_addon_name_display)",
+    "size": [ "100%c + 6px", "100%c + 2px" ],
+    "texture": "textures/ui/Black",
+    "alpha": 0.7,
+    "controls": [
+      {
+        "display_text": {
+          "type": "label",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "layer": 1,
+          "color": "$chat_text_color",
+          "text": "§f[§9Visual Capes §bAdd-on§f]§r",
+          "shadow": true
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_text_background_alpha",
+        "binding_name_override": "#alpha"
+      }
+    ]
+  },
+
+  "root_panel/chat_stack": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_before",
+        "where": {
+          "player_position@hud.player_position": {}
+        },
+        "value": {
+          "vca_text_display@hud.visualcapesaddon_hud_display": {}
+        }
+      }
+    ]
+  }
+}

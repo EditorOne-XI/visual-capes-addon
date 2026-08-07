@@ -1,0 +1,132 @@
+{
+  "format_version": "1.20.20",
+  "sound_definitions": {
+    "visualcapes.challenge_complete": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/visualcapes/challenge_complete",
+          "volume": 1.5,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "visualcapes.levelup": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/visualcapes/levelup",
+          "volume": 1.5,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "visualcapes.levelup_legacy": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/visualcapes/levelup_legacy",
+          "volume": 1.5,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "visualcapes.respawn_anchor.charge2": {
+      "__use_legacy_max_distance": "true",
+      "category": "player",
+      "max_distance": 30.0,
+      "min_distance": null,
+      "sounds": [
+        {
+          "name": "sounds/visualcapes/respawn_anchor_charge2",
+          "volume": 1.5,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "visualcapes.thunder": {
+      "__use_legacy_max_distance": "true",
+      "category": "player",
+      "max_distance": 100.0,
+      "min_distance": null,
+      "sounds": [
+        {
+          "name": "sounds/visualcapes/thunder1",
+          "volume": 8.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "visualcapes.void_explosion.near": {
+      "__use_legacy_max_distance": "true",
+      "category": "player",
+      "max_distance": 30.0,
+      "min_distance": null,
+      "sounds": [
+        {
+          "name": "sounds/visualcapes/impact_explode_flash",
+          "volume": 2.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "visualcapes.void_explosion": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/visualcapes/impact_explode",
+          "volume": 2.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "visualcapes.void_entrance": {
+      "__use_legacy_max_distance": "true",
+      "category": "player",
+      "max_distance": 10.0,
+      "min_distance": null,
+      "sounds": [
+        {
+          "name": "sounds/visualcapes/beacon_deactivate",
+          "volume": 10.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "visualcapes.the_second_coming_ambient": {
+      "__use_legacy_max_distance": "true",
+      "category": "player",
+      "max_distance": null,
+      "min_distance": null,
+      "sounds": [
+        {
+          "name": "sounds/visualcapes/tsc_ambience",
+          "volume": 0.6,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "visualcapes.portal": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/visualcapes/portal_travel",
+          "volume": 0.67,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "visualcapes.trident_thunder2": {
+      "__use_legacy_max_distance": "true",
+      "category": "player",
+      "max_distance": null,
+      "min_distance": null,
+      "sounds": [
+        {
+          "name": "sounds/visualcapes/trident_thunder2",
+          "load_on_low_memory": true
+        }
+      ]
+    }
+  }
+}

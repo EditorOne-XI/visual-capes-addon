@@ -1,0 +1,1654 @@
+{
+  "namespace": "capes_ui",
+
+  "visual_capes_starter_panel": {
+    "type": "stack_panel",
+    "visible": false,
+    "$padding": [ 0, 10 ],
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "logo@capes_common_ui.visual_capes_addon_logo": {}
+      },
+      {
+        "welcome_description@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.about.description.start"
+        }
+      },
+      {
+        "pad1@capes_common_ui.spacer": { "$spacer": "$padding" }
+      },
+      {
+        "features_title@capes_common_ui.title_label": {
+          "$title": "visualcapesaddon.about.title.features"
+        }
+      },
+      {
+        "features_list@capes_common_ui.description_label": {
+          "$description": "- 73 Designed Capes\n    > 48 Vanilla Minecraft Capes\n    > 19 Custom Capes\n    > 6 April Fools Exclusive Capes\n- 10 Customizable Capes (Templates)\n- Operator's Menu"
+        }
+      },
+      {
+        "pad2@capes_common_ui.spacer": { "$spacer": "$padding" }
+      },
+      {
+        "start_title@capes_common_ui.title_label": {
+          "$title": "visualcapesaddon.about.title.getStarted"
+        }
+      },
+      {
+        "start_description1@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.about.description.getStarted"
+        }
+      },
+      {
+        "pad3@capes_common_ui.spacer": { "$spacer": [ 0, 6 ] }
+      },
+      {
+        "start_description2@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.about.description.alreadyStarted"
+        }
+      }
+    ]
+  },
+
+  "addon_content_default": {
+    "type": "stack_panel",
+    "visible": false,
+    "$divider_space": [ 0, 10 ],
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "logo@capes_common_ui.visual_capes_addon_logo": {}
+      },
+      {
+        "equip_cape@capes_common_ui.title_label": {
+          "$title": "visualcapesaddon.about.title.equipCape"
+        }
+      },
+      {
+        "equip_cape_description1@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.about.description.equipCape"
+        }
+      },
+      {
+        "equip_cape_cmd1@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/ev_cape"
+        }
+      },
+      {
+        "equip_cape_cmd2@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/fn_cape"
+        }
+      },
+      { "pad1@capes_common_ui.spacer": {} },
+      {
+        "equip_cape_description2@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.about.description.equipCape_player"
+        }
+      },
+      {
+        "equip_cape_description2cmds@capes_common_ui.description_label": {
+          "$description": "/event entity <target> ...\n/execute as <target> run function ..."
+        }
+      },
+      {
+        "equip_cape_cmd3@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/ev_cape2"
+        }
+      },
+      {
+        "equip_cape_cmd4@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/fn_cape2"
+        }
+      },
+      { "pad2@capes_common_ui.spacer": { "$spacer": "$divider_space" } },
+      {
+        "elytra_cape_title@capes_common_ui.title_label": {
+          "$title": "visualcapesaddon.about.title.capeElytra"
+        }
+      },
+      {
+        "elytra_cape@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.about.description.capeElytra"
+        }
+      },
+      {
+        "elytra_cape_image@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/elytra_cape"
+        }
+      },
+      { "pad3@capes_common_ui.spacer": { "$spacer": "$divider_space" } },
+      {
+        "remove_cape@capes_common_ui.title_label": {
+          "$title": "visualcapesaddon.about.title.removeCape"
+        }
+      },
+      {
+        "remove_cape_description1@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.about.description.removeCape"
+        }
+      },
+      {
+        "remove_cape_cmd1@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "8.4375%x" ],
+          "$texture": "textures/capes/ui/examples/ev_remove_cape"
+        }
+      },
+      {
+        "remove_cape_cmd2@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "8.4375%x" ],
+          "$texture": "textures/capes/ui/examples/fn_remove_cape"
+        }
+      },
+      { "pad4@capes_common_ui.spacer": {} },
+      {
+        "remove_cape_description2@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.about.description.removeCape_player"
+        }
+      },
+      {
+        "remove_cape_cmd3@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "8.4375%x" ],
+          "$texture": "textures/capes/ui/examples/ev_remove_cape2"
+        }
+      },
+      {
+        "remove_cape_cmd4@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "8.4375%x" ],
+          "$texture": "textures/capes/ui/examples/fn_remove_cape2"
+        }
+      },
+      { "pad5@capes_common_ui.spacer": {} }
+    ]
+  },
+
+  "vanilla_capes_list": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "vanilla_capes_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "pan_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "pan_cape_toggle",
+          "$cape_name": "Pan Cape",
+          "$cape_namespace": "capes:pan_cape",
+          "$cape_texture": "pan/icon",
+          "$elytra_texture": "pan/icon-elytra"
+        }
+      },
+      {
+        "migrator_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "migrator_cape_toggle",
+          "$cape_name": "Migrator Cape",
+          "$cape_namespace": "capes:migrator_cape",
+          "$cape_texture": "microsoft/icon",
+          "$elytra_texture": "microsoft/icon-elytra"
+        }
+      },
+      {
+        "vanilla_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "vanilla_cape_toggle",
+          "$cape_name": "One Vanilla Cape",
+          "$cape_namespace": "capes:vanilla_cape",
+          "$cape_texture": "vanilla/icon",
+          "$elytra_texture": "vanilla/icon-elytra"
+        }
+      },
+      {
+        "mc_common_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "mc_common_cape_toggle",
+          "$cape_name": "Common Cape",
+          "$cape_namespace": "capes:mc_common_cape",
+          "$cape_texture": "mcCommon/icon",
+          "$elytra_texture": "mcCommon/icon-elytra"
+        }
+      },
+      {
+        "founder_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "founder_cape_toggle",
+          "$cape_name": "Founder's Cape",
+          "$cape_namespace": "capes:founder_cape",
+          "$cape_texture": "founder/icon",
+          "$elytra_texture": "founder/icon-elytra"
+        }
+      },
+      {
+        "progress_pride_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "progress_pride_cape_toggle",
+          "$cape_name": "Progress Pride Cape",
+          "$cape_namespace": "capes:progress_pride_cape",
+          "$cape_texture": "progressPride/icon",
+          "$elytra_texture": "progressPride/icon-elytra"
+        }
+      },
+      {
+        "cherry_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "cherry_cape_toggle",
+          "$cape_name": "Cherry Cape",
+          "$cape_namespace": "capes:cherry_cape",
+          "$cape_texture": "cherry/icon",
+          "$elytra_texture": "cherry/icon-elytra"
+        }
+      },
+      {
+        "tiktok_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "tiktok_cape_toggle",
+          "$cape_name": "Follower's Cape",
+          "$cape_namespace": "capes:tiktok_cape",
+          "$cape_texture": "tiktok/icon",
+          "$elytra_texture": "tiktok/icon-elytra"
+        }
+      },
+      {
+        "twitch_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "twitch_cape_toggle",
+          "$cape_name": "Purple Heart Cape",
+          "$cape_namespace": "capes:twitch_cape",
+          "$cape_texture": "twitch/icon",
+          "$elytra_texture": "twitch/icon-elytra"
+        }
+      },
+      {
+        "fifteenth_year_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "fifteenth_year_cape_toggle",
+          "$cape_name": "15-Year Anniversary Cape",
+          "$cape_namespace": "capes:fifteenth_year_cape",
+          "$cape_texture": "15thYear/icon",
+          "$elytra_texture": "15thYear/icon-elytra"
+        }
+      },
+      {
+        "mcc_15th_year_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "mcc_15th_year_cape_toggle",
+          "$cape_name": "MCC 15th Year Cape",
+          "$cape_namespace": "capes:mcc_15th_year_cape",
+          "$cape_texture": "mcc15/icon",
+          "$elytra_texture": "mcc15/icon-elytra"
+        }
+      },
+      {
+        "mojang_office_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "mojang_office_cape_toggle",
+          "$cape_name": "Mojang Office Cape",
+          "$cape_namespace": "capes:mojang_office_cape",
+          "$cape_texture": "mojangOffice/icon",
+          "$elytra_texture": "mojangOffice/icon-elytra"
+        }
+      },
+      {
+        "mcmovie_home_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "mcmovie_home_cape_toggle",
+          "$cape_name": "Home Cape",
+          "$cape_namespace": "capes:mcmovie_home_cape",
+          "$cape_texture": "home/icon",
+          "$elytra_texture": "home/icon-elytra"
+        }
+      },
+      {
+        "mcmovie_menace_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "mcmovie_menace_cape_toggle",
+          "$cape_name": "Menace Cape",
+          "$cape_namespace": "capes:mcmovie_menace_cape",
+          "$cape_texture": "menace/icon",
+          "$elytra_texture": "menace/icon-elytra"
+        }
+      },
+      {
+        "mcmovie_yearn_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "mcmovie_yearn_cape_toggle",
+          "$cape_name": "Yearn Cape",
+          "$cape_namespace": "capes:mcmovie_yearn_cape",
+          "$cape_texture": "yearn/icon",
+          "$elytra_texture": "yearn/icon-elytra"
+        }
+      },
+      {
+        "copper_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "copper_cape_toggle",
+          "$cape_name": "Copper Cape",
+          "$cape_namespace": "capes:copper_cape",
+          "$cape_texture": "copper/icon",
+          "$elytra_texture": "copper/icon-elytra"
+        }
+      },
+      {
+        "zombie_horse_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "zombie_horse_cape_toggle",
+          "$cape_name": "Zombie Horse Cape",
+          "$cape_namespace": "capes:zombie_horse_cape",
+          "$cape_texture": "zombieHorse/icon",
+          "$elytra_texture": "zombieHorse/icon-elytra"
+        }
+      },
+      {
+        "builder_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "builder_cape_toggle",
+          "$cape_name": "Builder Cape",
+          "$cape_namespace": "capes:builder_cape",
+          "$cape_texture": "builder/icon",
+          "$elytra_texture": "builder/icon-elytra"
+        }
+      },
+      {
+        "minecon2011_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "minecon2011_cape_toggle",
+          "$cape_name": "MINECON 2011 Cape",
+          "$cape_namespace": "capes:minecon2011_cape",
+          "$cape_texture": "minecon2011/icon",
+          "$elytra_texture": "minecon2011/icon-elytra"
+        }
+      },
+      {
+        "minecon2012_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "minecon2012_cape_toggle",
+          "$cape_name": "MINECON 2012 Cape",
+          "$cape_namespace": "capes:minecon2012_cape",
+          "$cape_texture": "minecon2012/icon",
+          "$elytra_texture": "minecon2012/icon-elytra"
+        }
+      },
+      {
+        "minecon2013_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "minecon2013_cape_toggle",
+          "$cape_name": "MINECON 2013 Cape",
+          "$cape_namespace": "capes:minecon2013_cape",
+          "$cape_texture": "minecon2013/icon",
+          "$elytra_texture": "minecon2013/icon-elytra"
+        }
+      },
+      {
+        "minecon2015_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "minecon2015_cape_toggle",
+          "$cape_name": "MINECON 2015 Cape",
+          "$cape_namespace": "capes:minecon2015_cape",
+          "$cape_texture": "minecon2015/icon",
+          "$elytra_texture": "minecon2015/icon-elytra"
+        }
+      },
+      {
+        "minecon2016_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "minecon2016_cape_toggle",
+          "$cape_name": "MINECON 2016 Cape",
+          "$cape_namespace": "capes:minecon2016_cape",
+          "$cape_texture": "minecon2016/icon",
+          "$elytra_texture": "minecon2016/icon-elytra"
+        }
+      },
+      {
+        "mc_experience_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "mc_experience_cape_toggle",
+          "$cape_name": "Minecraft Experience Cape",
+          "$cape_namespace": "capes:mc_experience_cape",
+          "$cape_texture": "mcExperience/icon",
+          "$elytra_texture": "mcExperience/icon-elytra"
+        }
+      },
+      {
+        "moonlight_trail_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "moonlight_trail_cape_toggle",
+          "$cape_name": "Moonlight Trail Cape",
+          "$cape_namespace": "capes:moonlight_trail_cape",
+          "$cape_texture": "moonlightTrail/icon",
+          "$elytra_texture": "moonlightTrail/icon-elytra"
+        }
+      },
+      {
+        "crafter_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "crafter_cape_toggle",
+          "$cape_name": "Crafter Cape",
+          "$cape_namespace": "capes:crafter_cape",
+          "$cape_texture": "crafter/icon",
+          "$elytra_texture": "crafter/icon-elytra"
+        }
+      },
+      {
+        "translator_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "translator_cape_toggle",
+          "$cape_name": "Translator Cape",
+          "$cape_namespace": "capes:translator_cape",
+          "$cape_texture": "crowdinTranslator/icon",
+          "$elytra_texture": "crowdinTranslator/icon-elytra"
+        }
+      },
+      {
+        "cn_translator_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "cn_translator_cape_toggle",
+          "$cape_name": "Chinese Translator Cape",
+          "$cape_namespace": "capes:cn_translator_cape",
+          "$cape_texture": "chineseTranslator/icon",
+          "$elytra_texture": "chineseTranslator/icon-elytra"
+        }
+      },
+      {
+        "moderator_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "moderator_cape_toggle",
+          "$cape_name": "Mojira Moderator Cape",
+          "$cape_namespace": "capes:moderator_cape",
+          "$cape_texture": "bugTracker/icon",
+          "$elytra_texture": "bugTracker/icon-elytra"
+        }
+      },
+      {
+        "mapmaker_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "mapmaker_cape_toggle",
+          "$cape_name": "Realms Mapmaker Cape",
+          "$cape_namespace": "capes:mapmaker_cape",
+          "$cape_texture": "mapmaker/icon",
+          "$elytra_texture": "mapmaker/icon-elytra"
+        }
+      },
+      {
+        "scrolls_champion_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "scrolls_champion_cape_toggle",
+          "$cape_name": "Scrolls Champion Cape",
+          "$cape_namespace": "capes:scrolls_champion_cape",
+          "$cape_texture": "scrolls/icon",
+          "$elytra_texture": "scrolls/icon-elytra"
+        }
+      },
+      {
+        "cobalt_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "cobalt_cape_toggle",
+          "$cape_name": "Cobalt Cape",
+          "$cape_namespace": "capes:cobalt_cape",
+          "$cape_texture": "cobalt/icon",
+          "$elytra_texture": "cobalt/icon-elytra"
+        }
+      },
+      {
+        "bacon_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "bacon_cape_toggle",
+          "$cape_name": "Bacon Cape",
+          "$cape_namespace": "capes:bacon_cape",
+          "$cape_texture": "bacon/icon"
+        }
+      },
+      {
+        "millionthsale_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "millionthsale_cape_toggle",
+          "$cape_name": "Millionth Customer Cape",
+          "$cape_namespace": "capes:millionthsale_cape",
+          "$cape_texture": "millionth/icon",
+          "$elytra_texture": "millionth/icon-elytra"
+        }
+      },
+      {
+        "dannybstyle_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "dannybstyle_cape_toggle",
+          "$cape_name": "dannyBstyle's Cape",
+          "$cape_namespace": "capes:dannybstyle_cape",
+          "$cape_texture": "dannyBstyle/icon",
+          "$elytra_texture": "dannyBstyle/icon-elytra"
+        }
+      },
+      {
+        "snowman_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "snowman_cape_toggle",
+          "$cape_name": "Snowman Cape",
+          "$cape_namespace": "capes:snowman_cape",
+          "$cape_texture": "snowman/icon",
+          "$elytra_texture": "snowman/icon-elytra"
+        }
+      },
+      {
+        "cheapsh0t_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "cheapsh0t_cape_toggle",
+          "$cape_name": "cheapsh0t's Cape",
+          "$cape_namespace": "capes:cheapsh0t_cape",
+          "$cape_texture": "cheapsh0t/icon",
+          "$elytra_texture": "cheapsh0t/icon-elytra"
+        }
+      },
+      {
+        "spade_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "spade_cape_toggle",
+          "$cape_name": "Spade Cape",
+          "$cape_namespace": "capes:spade_cape",
+          "$cape_texture": "spade/icon",
+          "$elytra_texture": "spade/icon-elytra"
+        }
+      },
+      {
+        "prismarine_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "prismarine_cape_toggle",
+          "$cape_name": "Prismarine Cape",
+          "$cape_namespace": "capes:prismarine_cape",
+          "$cape_texture": "prismarine/icon",
+          "$elytra_texture": "prismarine/icon-elytra"
+        }
+      },
+      {
+        "turtle_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "turtle_cape_toggle",
+          "$cape_name": "Turtle Cape",
+          "$cape_namespace": "capes:turtle_cape",
+          "$cape_texture": "turtle/icon",
+          "$elytra_texture": "turtle/icon-elytra"
+        }
+      },
+      {
+        "birthday_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "birthday_cape_toggle",
+          "$cape_name": "Birthday Cape",
+          "$cape_namespace": "capes:birthday_cape",
+          "$cape_texture": "party/icon",
+          "$elytra_texture": "party/icon-elytra"
+        }
+      },
+      {
+        "valentine_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "valentine_cape_toggle",
+          "$cape_name": "Valentine Cape",
+          "$cape_namespace": "capes:valentine_cape",
+          "$cape_texture": "valentine/icon",
+          "$elytra_texture": "valentine/icon-elytra"
+        }
+      },
+      {
+        "oxeye_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "oxeye_cape_toggle",
+          "$cape_name": "Oxeye Cape",
+          "$cape_namespace": "capes:oxeye_cape",
+          "$cape_texture": "oxeye/icon",
+          "$elytra_texture": "oxeye/icon-elytra"
+        }
+      },
+      {
+        "blueprint_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "blueprint_cape_toggle",
+          "$cape_name": "Blueprint Cape",
+          "$cape_namespace": "capes:blueprint_cape",
+          "$cape_texture": "blueprint/icon",
+          "$elytra_texture": "blueprint/icon-elytra"
+        }
+      },
+      {
+        "mojang_cape1@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "mojang_cape1_toggle",
+          "$cape_name": "Mojang Cape [Classic]",
+          "$cape_namespace": "capes:mojang_cape1",
+          "$cape_texture": "mojangClassic/icon",
+          "$elytra_texture": "mojangClassic/icon-elytra"
+        }
+      },
+      {
+        "xbox360_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "xbox360_cape_toggle",
+          "$cape_name": "Microsoft Xbox 360 Cape",
+          "$cape_namespace": "capes:xbox360_cape",
+          "$cape_texture": "microsoftXbox360/icon"
+        }
+      },
+      {
+        "fj_studios_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "fj_studios_cape_toggle",
+          "$cape_name": "4J Studios Cape",
+          "$cape_namespace": "capes:fj_studios_cape",
+          "$cape_texture": "fjstudios/icon"
+        }
+      },
+      {
+        "mojang_cape2@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "mojang_cape2_toggle",
+          "$cape_name": "Mojang Cape",
+          "$cape_namespace": "capes:mojang_cape2",
+          "$cape_texture": "mojang/icon",
+          "$elytra_texture": "mojang/icon-elytra"
+        }
+      },
+      {
+        "mojang_studios_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "mojang_studios_cape_toggle",
+          "$cape_name": "Mojang Studios Cape",
+          "$cape_namespace": "capes:mojang_studios_cape",
+          "$cape_texture": "mojangStudios/icon",
+          "$elytra_texture": "mojangStudios/icon-elytra"
+        }
+      },
+      {
+        "christmas2010_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "christmas2010_cape_toggle",
+          "$cape_name": "Christmas 2010 Cape",
+          "$cape_namespace": "capes:christmas2010_cape",
+          "$cape_texture": "christmas/icon"
+        }
+      },
+      {
+        "ny2011_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "ny2011_cape_toggle",
+          "$cape_name": "New Year 2011 Cape",
+          "$cape_namespace": "capes:ny2011_cape",
+          "$cape_texture": "newyear/icon"
+        }
+      },
+      {
+        "xbox360_1st_birthday_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "xbox360_1st_birthday_cape_toggle",
+          "$cape_name": "1st Birthday Cape",
+          "$cape_namespace": "capes:xbox360_1st_birthday_cape",
+          "$cape_texture": "xbox360FirstBirthday/icon"
+        }
+      }
+    ]
+  },
+
+  "custom_presets_capes_list": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "custom_capes_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "creeper15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "creeper15_cape_toggle",
+          "$cape_name": "Creeper Cape",
+          "$cape_namespace": "customcapes:creeper15_cape",
+          "$cape_texture": "+custom/CreeperCape-icon"
+        }
+      },
+      {
+        "redstone15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "redstone15_cape_toggle",
+          "$cape_name": "Redstone Cape",
+          "$cape_namespace": "customcapes:redstone15_cape",
+          "$cape_texture": "+custom/RedstoneCape-icon"
+        }
+      },
+      {
+        "enderdragon15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "enderdragon15_cape_toggle",
+          "$cape_name": "Ender Dragon Cape",
+          "$cape_namespace": "customcapes:enderdragon15_cape",
+          "$cape_texture": "+custom/EnderdragonCape-icon",
+          "$elytra_texture": "+custom/EnderdragonCape-icon-elytra"
+        }
+      },
+      {
+        "evoker15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "evoker15_cape_toggle",
+          "$cape_name": "Evoker Cape",
+          "$cape_namespace": "customcapes:evoker15_cape",
+          "$cape_texture": "+custom/EvokerCape-icon"
+        }
+      },
+      {
+        "pinksheep15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "pinksheep15_cape_toggle",
+          "$cape_name": "Sheep Colored-Cape",
+          "$cape_namespace": "customcapes:pinksheep15_cape",
+          "$cape_texture": "+custom/SheepCape-icon"
+        }
+      },
+      {
+        "dolphin15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "dolphin15_cape_toggle",
+          "$cape_name": "Dolphin Cape",
+          "$cape_namespace": "customcapes:dolphin15_cape",
+          "$cape_texture": "+custom/DolphinCape-icon"
+        }
+      },
+      {
+        "panda15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "panda15_cape_toggle",
+          "$cape_name": "Panda Cape",
+          "$cape_namespace": "customcapes:panda15_cape",
+          "$cape_texture": "+custom/PandaCape-icon"
+        }
+      },
+      {
+        "villager15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "villager15_cape_toggle",
+          "$cape_name": "Villager Cape",
+          "$cape_namespace": "customcapes:villager15_cape",
+          "$cape_texture": "+custom/VillagerCape-icon"
+        }
+      },
+      {
+        "bee15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "bee15_cape_toggle",
+          "$cape_name": "Bee Cape",
+          "$cape_namespace": "customcapes:bee15_cape",
+          "$cape_texture": "+custom/BeeCape-icon"
+        }
+      },
+      {
+        "piglinbrute15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "piglinbrute15_cape_toggle",
+          "$cape_name": "Piglin Brute Cape",
+          "$cape_namespace": "customcapes:piglinbrute15_cape",
+          "$cape_texture": "+custom/PiglinBruteCape-icon"
+        }
+      },
+      {
+        "axolotl15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "axolotl15_cape_toggle",
+          "$cape_name": "Axolotl Cape",
+          "$cape_namespace": "customcapes:axolotl15_cape",
+          "$cape_texture": "+custom/AxolotlCape-icon"
+        }
+      },
+      {
+        "deepslate15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "deepslate15_cape_toggle",
+          "$cape_name": "Deepslate Block Cape",
+          "$cape_namespace": "customcapes:deepslate15_cape",
+          "$cape_texture": "+custom/DeepslateCape-icon"
+        }
+      },
+      {
+        "frog15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "frog15_cape_toggle",
+          "$cape_name": "Frog Cape",
+          "$cape_namespace": "customcapes:frog15_cape",
+          "$cape_texture": "+custom/FrogCape-icon"
+        }
+      },
+      {
+        "camel15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "camel15_cape_toggle",
+          "$cape_name": "Camel Cape",
+          "$cape_namespace": "customcapes:camel15_cape",
+          "$cape_texture": "+custom/CamelCape-icon"
+        }
+      },
+      {
+        "breeze15_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "breeze15_cape_toggle",
+          "$cape_name": "Breeze Cape",
+          "$cape_namespace": "customcapes:breeze15_cape",
+          "$cape_texture": "+custom/BreezeCape-icon"
+        }
+      },
+      {
+        "netherstar_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "netherstar_cape_toggle",
+          "$cape_name": "Nether Star Withered Cape",
+          "$cape_namespace": "customcapes:netherstar_cape",
+          "$cape_texture": "+custom/NetherStarCape-icon",
+          "$elytra_texture": "+custom/NetherStarCape-icon-elytra"
+        }
+      },
+      {
+        "sulfurcube_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "sulfurcube_cape_toggle",
+          "$cape_name": "Sulfur Cube Cape",
+          "$cape_namespace": "customcapes:sulfurcube_cape",
+          "$cape_texture": "+custom/SulfurCubeCape-icon",
+          "$elytra_texture": "+custom/SulfurCubeCape-icon-elytra"
+        }
+      },
+      {
+        "brsulfurcube_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "brsulfurcube_cape_toggle",
+          "$cape_name": "Bedrock Sulfur Cube Cape",
+          "$cape_namespace": "customcapes:brsulfurcube_cape",
+          "$cape_texture": "+custom/BedrockSulfurCubeCape-icon",
+          "$elytra_texture": "+custom/BedrockSulfurCubeCape-icon-elytra"
+        }
+      }
+    ]
+  },
+
+  "april_fools_capes_list": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "april_fools_capes_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "awesom@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "awesom_toggle",
+          "$cape_name": "Awesom Caep",
+          "$cape_namespace": "aprilfoolscape:awesom",
+          "$cape_texture": "+aprilfools/Awesom"
+        }
+      },
+      {
+        "blonk@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "blonk_toggle",
+          "$cape_name": "Blonk Caep",
+          "$cape_namespace": "aprilfoolscape:blonk",
+          "$cape_texture": "+aprilfools/Blonk"
+        }
+      },
+      {
+        "no_circle@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "no_circle_toggle",
+          "$cape_name": "No Circle Caep",
+          "$cape_namespace": "aprilfoolscape:no_circle",
+          "$cape_texture": "+aprilfools/No_circle"
+        }
+      },
+      {
+        "nyan@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "nyan_toggle",
+          "$cape_name": "Nyan Caep",
+          "$cape_namespace": "aprilfoolscape:nyan",
+          "$cape_texture": "+aprilfools/Nyan"
+        }
+      },
+      {
+        "squid@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "squid_toggle",
+          "$cape_name": "Squid Caep",
+          "$cape_namespace": "aprilfoolscape:squid",
+          "$cape_texture": "+aprilfools/Squid"
+        }
+      },
+      {
+        "veterinarian@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "veterinarian_toggle",
+          "$cape_name": "Veterinarian Caep",
+          "$cape_namespace": "aprilfoolscape:veterinarian",
+          "$cape_texture": "+aprilfools/Veterinarian"
+        }
+      }
+    ]
+  },
+
+  "all_capes_list": {
+    "type": "stack_panel",
+    "visible": false,
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "capes_list_description@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.capesList.description"
+        }
+      },
+      { "spacer@capes_common_ui.spacer": {} },
+      {
+        "capes_list_tab": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 21 ],
+          "controls": [
+            {
+              "vanilla_capes_button@capes_common_ui.capes_list_toggle_base": {
+                "$toggle_view_binding_name": "vanilla_capes_toggle",
+                "$toggle_group_forced_index": 0,
+                "$button_text": "Vanilla"
+               }
+            },
+            {
+              "custom_capes_tab@capes_common_ui.capes_list_toggle_base": {
+                "$toggle_view_binding_name": "custom_capes_toggle",
+                "$toggle_group_forced_index": 1,
+                "$button_text": "Custom"
+              }
+            },
+            {
+              "april_fools_capes_tab@capes_common_ui.capes_list_toggle_base": {
+                "$toggle_view_binding_name": "april_fools_capes_toggle",
+                "$toggle_group_forced_index": 2,
+                "$button_text": "April Fools"
+              }
+            }
+          ]
+        }
+      },
+      { "vanilla_capes_list@capes_ui.vanilla_capes_list": {} },
+      { "custom_presets_capes_list@capes_ui.custom_presets_capes_list": {} },
+      { "april_fools_capes_list@capes_ui.april_fools_capes_list": {} }
+    ]
+  },
+
+  "rarity_cape_section": {
+    "type": "stack_panel",
+    "$divider_space": [ 0, 10 ],
+    "visible": false,
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "image@capes_common_ui.image_panel": {
+          "$image_size": [ "80%", "44.9297972%x" ],
+          "$texture": "textures/capes/ui/rarity_per_cape"
+        }
+      },
+      {
+        "rarity_title_top@capes_common_ui.title_label": {
+          "$title": "visualcapesaddon.capeRarity.title"
+        }
+      },
+      {
+        "rarity_description_top@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.capeRarity.description"
+        }
+      },
+      {
+        "pad1@capes_common_ui.spacer": { "$spacer": "$divider_space" }
+      },
+      {
+        "rarity_system_title@capes_common_ui.title_label": {
+          "$title": "visualcapesaddon.raritySystem.title"
+        }
+      },
+      {
+        "rarity_system_description1@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.raritySystem.descriptionAbout"
+        }
+      },
+      {
+        "rarity_system_description1_5@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.raritySystem.descriptionDefaults"
+        }
+      },
+      {
+        "pad2@capes_common_ui.spacer": {}
+      },
+      {
+        "rarity_system_description_menu@capes_common_ui.description_label": {
+          "ignored": "(not $settings_section)",
+          "$description": "visualcapesaddon.raritySystem.description.menu"
+        }
+      },
+      {
+        "rarity_system_pumpkin_pie@capes_common_ui.image_panel": {
+          "ignored": "(not $settings_section)",
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/cape_selector"
+        }
+      },
+      {
+        "pad3@capes_common_ui.spacer": {
+          "ignored": "(not $settings_section)"
+        }
+      },
+      {
+        "rarity_system_description2@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.raritySystem.description.opmenu"
+        }
+      },
+      {
+        "rarity_system_opcape_command@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "30%x" ],
+          "$texture": "textures/capes/ui/examples/opcape_cmd"
+        }
+      },
+      {
+        "pad4@capes_common_ui.spacer": {}
+      },
+      {
+        "rarity_system_description3@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.raritySystem.description.opmenu2"
+        }
+      },
+      {
+        "rarity_system_op_menu@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/op_menu"
+        }
+      },
+      {
+        "pad5@capes_common_ui.spacer": { "$spacer": "$divider_space" }
+      },
+      {
+        "rarity_system_survival_title@capes_common_ui.title_label": {
+          "$title": "visualcapesaddon.rarity_survival.title"
+        }
+      },
+      {
+        "rarity_system_survival_description1@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.rarity_survival.description1"
+        }
+      },
+      {
+        "rarity_system_survival_description2@capes_common_ui.description_label": {
+          "$description_color": "$7_color_format",
+          "$description": "visualcapesaddon.rarity_survival.description2"
+        }
+      },
+      {
+        "rarity_system_survival_description3@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.rarity_survival.description3"
+        }
+      },
+      {
+        "rarity_system_survival_image1@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/reward_convert"
+        }
+      },
+      {
+        "rarity_system_survival_image2@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/rewards_menu"
+        }
+      },
+      {
+        "pad6@capes_common_ui.spacer": {}
+      },
+      {
+        "rarity_system_survival_description4@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.rarity_survival.description.register"
+        }
+      },
+      {
+        "rarity_system_survival_image3@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/stored_buffs"
+        }
+      },
+      {
+        "pad7@capes_common_ui.spacer": {}
+      },
+      {
+        "rarity_system_survival_header_items@capes_common_ui.label": {
+          "$text_color": "$e_color_format",
+          "$text": "visualcapesaddon.rarity_survival.header.items",
+          "$text_scale": 1.5
+        }
+      },
+      {
+        "rarity_system_survival_description_appleenchanted@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.rarity_survival.description.enchantedapple"
+        }
+      },
+      {
+        "rarity_system_survival_image_appleenchanted@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/appleEnchanted_recipe"
+        }
+      },
+      {
+        "pad8@capes_common_ui.spacer": {}
+      },
+      {
+        "rarity_system_survival_description_heavycore@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.rarity_survival.description.heavycore"
+        }
+      },
+      {
+        "rarity_system_survival_image_heavycore@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/heavy_core_death"
+        }
+      },
+      {
+        "pad9@capes_common_ui.spacer": {}
+      },
+      {
+        "rarity_system_survival_header_custombuffs@capes_common_ui.label": {
+          "$text_color": "$e_color_format",
+          "$text": "visualcapesaddon.rarity_survival.header.customBuffs",
+          "$text_scale": 1.5
+        }
+      },
+      {
+        "rarity_system_survival_description_custombuffs@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.rarity_survival.description.customBuffs"
+        }
+      },
+      {
+        "pad10@capes_common_ui.spacer": {}
+      },
+      {
+        "rarity_system_survival_bindcurse@capes_common_ui.description_label": {
+          "$description_color": "$c_color_format",
+          "$description": "Curse of Binding:"
+        }
+      },
+      {
+        "rarity_system_survival_description_bindcurse@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.rarity_survival.description.cursebinding"
+        }
+      },
+      {
+        "rarity_system_survival_image_bindcurse@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/bindCurse"
+        }
+      },
+      {
+        "pad11@capes_common_ui.spacer": {}
+      },
+      {
+        "rarity_system_survival_instantrecover@capes_common_ui.description_label": {
+          "$description_color": "$a_color_format",
+          "$description": "Instant Recover:"
+        }
+      },
+      {
+        "rarity_system_survival_description_instantrecover1@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.rarity_survival.description.instantrecover1"
+        }
+      },
+      {
+        "rarity_system_survival_description_instantrecover2@capes_common_ui.description_label": {
+          "$description_color": "$7_color_format",
+          "$description": "visualcapesaddon.rarity_survival.description.instantrecover2"
+        }
+      },
+      {
+        "rarity_system_survival_image_instantrecover@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/instantRecover"
+        }
+      },
+      {
+        "pad12@capes_common_ui.spacer": {}
+      },
+      {
+        "rarity_system_survival_netherdomain@capes_common_ui.description_label": {
+          "$description_color": "$e_color_format",
+          "$description": "Nether Domain:"
+        }
+      },
+      {
+        "rarity_system_survival_description_netherdomain1@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.rarity_survival.description.netherdomain1"
+        }
+      },
+      {
+        "rarity_system_survival_description_netherdomainki@capes_common_ui.description_label": {
+          "$description_color": "$e_color_format",
+          "$description": "visualcapesaddon.rarity_survival.description.netherdomain.knownissue"
+        }
+      },
+      {
+        "rarity_system_survival_description_netherdomain2@capes_common_ui.description_label": {
+          "$description_color": "$e_color_format",
+          "$description": "visualcapesaddon.rarity_survival.description.netherdomain2"
+        }
+      },
+      {
+        "rarity_system_survival_description_netherdomain3@capes_common_ui.description_label": {
+          "$description_color": "$e_color_format",
+          "$description": "visualcapesaddon.rarity_survival.description.netherdomain3"
+        }
+      },
+      {
+        "rarity_system_survival_image_netherdomain@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/netherDomain"
+        }
+      },
+      {
+        "pad13@capes_common_ui.spacer": {}
+      },
+      {
+        "rarity_system_survival_selfdestruct@capes_common_ui.description_label": {
+          "$description_color": "$c_color_format",
+          "$description": "Self Destruct:"
+        }
+      },
+      {
+        "rarity_system_survival_description_selfdestruct@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.rarity_survival.description.selfdestruct"
+        }
+      },
+      {
+        "rarity_system_survival_image_selfdestruct@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/selfDestruct"
+        }
+      },
+      {
+        "pad14@capes_common_ui.spacer": {}
+      },
+      {
+        "rarity_system_survival_windpulse@capes_common_ui.description_label": {
+          "$description_color": "$a_color_format",
+          "$description": "Wind Pulse:"
+        }
+      },
+      {
+        "rarity_system_survival_description_windpulse@capes_common_ui.description_label": {
+          "$description": "visualcapesaddon.rarity_survival.description.windpulse"
+        }
+      },
+      {
+        "rarity_system_survival_image_windpulse@capes_common_ui.image_panel": {
+          "$image_size": [ "100%", "45%x" ],
+          "$texture": "textures/capes/ui/examples/rarity/windPulse"
+        }
+      },
+      {
+        "pad15@capes_common_ui.spacer": {}
+      }
+    ]
+  },
+
+  "about_visual_capes_main_section": {
+    "type": "stack_panel",
+    "$settings_section|default": false,
+    "$capes_list_default_index": 0,
+    "$info_tab_default_index": 0,
+    "$old_versions": false,
+    "size": [ "100% - 4px", "100%c + 2px" ],
+    "bindings": [
+      {
+        "ignored": "(not $settings_section)",
+        "binding_type": "view",
+        "source_control_name": "about_capes_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "about_visual_capes_tabs": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 30 ],
+          "controls": [
+            {
+              "starter_tab@capes_common_ui.about_tab_toggle_base": {
+                "ignored": "$settings_section",
+                "$toggle_view_binding_name": "starter_tab_toggle",
+                "$toggle_group_forced_index": 0,
+                "$button_text": "Main",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#form_text = 'I+Str') or (#form_text = 'I+Rar+Str') or (#form_text = 'I+Rar+Sur+Str'))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "information_tab@capes_common_ui.about_tab_toggle_base": {
+                "$toggle_view_binding_name": "information_tab_toggle",
+                "$toggle_group_forced_index": 1,
+                "$button_text": "Content",
+                "bindings": [
+                  {
+                    "ignored": "$settings_section",
+                    "binding_type": "view",
+                    "source_property_name": "((#form_text = 'I') or (#form_text = 'I+Rar') or (#form_text = 'I+Rar+Sur'))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "capes_tab@capes_common_ui.about_tab_toggle_base": {
+                "$toggle_view_binding_name": "capes_tab_toggle",
+                "$toggle_group_forced_index": 2,
+                "$button_text": "Capes"
+              }
+            },
+            {
+              "rarity_system_tab@capes_common_ui.about_tab_toggle_base": {
+                "ignored": "$old_versions",
+                "$toggle_view_binding_name": "rarity_system_tab_toggle",
+                "$toggle_group_forced_index": 3,
+                "$button_text": "Rarity",
+                "bindings": [
+                  {
+                    "ignored": "$settings_section",
+                    "binding_type": "view",
+                    "source_property_name": "((#form_text = 'I+Rar+Str') or (#form_text = 'I+Rar') or (#form_text = 'I+Rar+Sur+Str') or (#form_text = 'I+Rar+Sur'))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "spacer_top@capes_common_ui.spacer": {
+          "$spacer": [ 0, 5 ]
+        }
+      },
+      {
+        "visual_capes_starter_panel@capes_ui.visual_capes_starter_panel": {
+          "ignored": "$settings_section",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "starter_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "addon_content_default@capes_ui.addon_content_default": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "information_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "all_capes_list@capes_ui.all_capes_list": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "capes_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "rarity_cape_section@capes_ui.rarity_cape_section": {
+          "ignored": "$old_versions",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "rarity_system_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "rst_rewards_content": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "reward_requirements_title@capes_common_ui.label": {
+          "$text_color": "$e_color_format",
+          "$text": "visualcapesaddon.rarity_survival.reward.title"
+        }
+      },
+      {
+        "requirements_description@capes_common_ui.description_label": {
+          "ignored": true,
+          "$description": "Description"
+        }
+      },
+      {
+        "spacer1@capes_common_ui.spacer": {}
+      },
+      {
+        "split_panel": {
+          "type": "grid",
+          "grid_dimensions": [ 2, 1 ],
+          "size": [ "100%", 84 ],
+          "controls": [
+            {
+              "low_rarity": {
+                "type": "stack_panel",
+                "grid_position": [ 0, 0 ],
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                  {
+                    "uncommon_line": {
+                      "type": "panel",
+                      "size": [ "100%", 40 ],
+                      "controls": [
+                        {
+                          "text@capes_common_ui.label": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "$text_color": "$2_color_format",
+                            "$text": "Uncommon:",
+                            "$shadow": true
+                          }
+                        },
+                        {
+                          "amp@capes_common_ui.label": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "offset": [ 0, 10 ],
+                            "$text": "Max Amplifier: 1"
+                          }
+                        },
+                        {
+                          "exp_bottle@capes_common_ui.hotbar_slot_opaque": {
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "$item_id": "$experience_bottle_item_id",
+                            "$item_count": "16",
+                            "$item_name_label": "item.experience_bottle.name"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding": { "type": "panel", "size": [ 0, 4 ] }
+                  },
+                  {
+                    "rare_line": {
+                      "type": "panel",
+                      "size": [ "100%", 40 ],
+                      "controls": [
+                        {
+                          "text@capes_common_ui.label": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "$text_color": "$9_color_format",
+                            "$text": "Rare:",
+                            "$shadow": true
+                          }
+                        },
+                        {
+                          "amp@capes_common_ui.label": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "offset": [ 0, 10 ],
+                            "$text": "Max Amplifier: 4"
+                          }
+                        },
+                        {
+                          "exp_bottle@capes_common_ui.hotbar_slot_opaque": {
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "$item_id": "$experience_bottle_item_id",
+                            "$item_count": "32",
+                            "$item_name_label": "item.experience_bottle.name"
+                          }
+                        },
+                        {
+                          "gold_apple@capes_common_ui.hotbar_slot_opaque": {
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "offset": [ 20, 0 ],
+                            "$item_id": "$golden_apple_item_id",
+                            "$item_count": "16",
+                            "$item_name_label_color": "$b_color_format",
+                            "$item_name_label": "item.golden_apple.name"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "high_rarity": {
+                "type": "stack_panel",
+                "grid_position": [ 1, 0 ],
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                  {
+                    "epic_line": {
+                      "type": "panel",
+                      "size": [ "100%", 40 ],
+                      "controls": [
+                        {
+                          "text@capes_common_ui.label": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "$text_color": "$5_color_format",
+                            "$text": "Epic:",
+                            "$shadow": true
+                          }
+                        },
+                        {
+                          "amp@capes_common_ui.label": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "offset": [ 0, 10 ],
+                            "$text": "Max Amplifier: 7"
+                          }
+                        },
+                        {
+                          "exp_bottle@capes_common_ui.hotbar_slot_opaque": {
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "$item_id": "$experience_bottle_item_id",
+                            "$item_count": "48",
+                            "$item_name_label": "item.experience_bottle.name"
+                          }
+                        },
+                        {
+                          "gold_apple@capes_common_ui.hotbar_slot_opaque": {
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "offset": [ 20, 0 ],
+                            "$item_id": "$golden_apple_item_id",
+                            "$item_count": "64",
+                            "$item_name_label_color": "$b_color_format",
+                            "$item_name_label": "item.golden_apple.name"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding": { "type": "panel", "size": [ 0, 4 ] }
+                  },
+                  {
+                    "legendary_line": {
+                      "type": "panel",
+                      "size": [ "100%", 40 ],
+                      "controls": [
+                        {
+                          "text@capes_common_ui.label": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "$text_color": "$6_color_format",
+                            "$text": "Legendary:",
+                            "$shadow": true
+                          }
+                        },
+                        {
+                          "amp@capes_common_ui.label": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "offset": [ 0, 10 ],
+                            "$text": "Max Amplifier: 10"
+                          }
+                        },
+                        {
+                          "exp_bottle@capes_common_ui.hotbar_slot_opaque": {
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "$item_id": "$experience_bottle_item_id",
+                            "$item_count": "64",
+                            "$item_name_label": "item.experience_bottle.name"
+                          }
+                        },
+                        {
+                          "notch_apple@capes_common_ui.hotbar_slot_opaque": {
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "offset": [ 20, 0 ],
+                            "$item_id": "$enchanted_golden_apple_item_id",
+                            "$item_count": "16",
+                            "$item_name_label_color": "$d_color_format",
+                            "$item_name_label": "item.appleEnchanted.name"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "spacer2@capes_common_ui.spacer": {}
+      },
+      {
+        "note_description@capes_common_ui.description_label": {
+          "$description_color": "$7_color_format",
+          "$description": "Note: Custom Buffs needs a Heavy Core to activate after registering it or you might waste a cape rarity."
+        }
+      }
+    ]
+  },
+
+  "rst_rewards_requirements": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "reward_requirements_toggle_base@capes_common_ui.reward_requirements_toggle_base": {
+          "$toggle_view_binding_name": "reward_requirements_toggle",
+          "$button_text": "Show Requirements"
+        }
+      },
+      {
+        "background": {
+          "type": "image",
+          "visible": false,
+          "size": [ "100%", "100%c + 8px" ],
+          "texture": "textures/capes/ui/cells_background",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "reward_requirements_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "panel": {
+                "type": "panel",
+                "size": [ "100% - 10px", "100%c" ],
+                "controls": [
+                  {
+                    "rst_rewards_content@capes_ui.rst_rewards_content": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

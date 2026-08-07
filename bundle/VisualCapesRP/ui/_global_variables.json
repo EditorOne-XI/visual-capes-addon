@@ -1,0 +1,19 @@
+/****************************************************************************************************\
+| Visual Capes Add-on UI Global Variables
+| - by EditorOne5312 | EditorOne XI - All rights reserved.
+|   $ Youtube: EditorOne XI
+|   $ Reddit: u/EditorOneXI
+|   $ GitHub: EditorOne-XI
+|   $ Modbay: EditorOne XI
+|   $ MCPEDL: EditorOne (Legacy Versions)
+| > IF DOWNLOADED FROM ANOTHER SITE BESIDES MY SOURCES, REPORT THE SITE IMMEDIATELY! (Indirectly to me)
+\****************************************************************************************************/
+{
+  // Item IDs. Change if the game updates.
+  "$experience_bottle_item_id": 548,
+  "$golden_apple_item_id": 287,
+  "$enchanted_golden_apple_item_id": 288,
+
+  // HUD Add-on Name Display
+  "$show_addon_name_display": true
+}

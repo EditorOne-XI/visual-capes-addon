@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "target": "ES2022",
+    "moduleResolution": "NodeNext",
+    "allowJs": true,
+    "checkJs": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "rootDirs": [
+      "./VisualCapesBP/scripts",
+      "./VisualCapesExt/scripts",
+      "./VisualCapesExt/subpacks/rarity_tweaks/scripts"
+    ]
+  },
+  "include": [
+    "VisualCapesBP/scripts/**/*",
+    "VisualCapesExt/scripts/**/*",
+    "VisualCapesExt/subpacks/**/scripts/**/*"
+  ],
+  "exclude": ["node_modules"]
+}

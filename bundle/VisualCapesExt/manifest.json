@@ -1,0 +1,64 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "v2.6.0 - Made by EditorOne5312\nMake sure to put this above the \"Visual Capes BP\".",
+    "name": "§bVisual Capes Addon §9BP§r §e(Extension)§r",
+    "uuid": "7dfa838a-e8aa-44bc-8728-30e594e0f0ac",
+    "version": [ 2, 6, 0 ],
+    "min_engine_version": [ 1, 26, 30 ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "54c0cbd9-210b-4358-8772-7ecd59be336c",
+      "version": [ 2, 6, 0 ]
+    },
+    {
+			"type": "script",
+			"language": "javascript",
+			"uuid": "bf73b475-14ce-477c-8dec-da1f53920641",
+			"entry": "scripts/VisualCapes.js",
+			"version": [ 1, 0, 0 ]
+		}
+  ],
+  "subpacks": [
+    {
+      "folder_name": "rarity_tweaks",
+      "memory_tier": 1,
+      "name": "§dRarity System with Survival Tweaks§r"
+    },
+    {
+      "folder_name": "rarity_none",
+      "memory_tier": 1,
+      "name": "§bRarity System Only§r"
+    },
+    {
+      "folder_name": "default",
+      "memory_tier": 1,
+      "name": "§aDefault§r"
+    }
+  ],
+  "settings": [
+    {
+      "type": "label",
+      "text": "§aDefault§r: Enjoy Visual Capes Add-on with it's natural player-based capes equipped content. §7(Rarity Icons still shows but everything is normal as intended.)§r\n\n§bRarity System Only§r: Apply Visual Capes Add-on with its new Rarity-based capes for the players to equip!\n\n§dRarity System with Survival Tweaks§r: Apply Visual Capes Add-on with in-game survival buffs when equipping a cape based on its rarity!"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "90b53ed4-a651-4fff-bfb6-48f5734b6cb2",
+      "version": [ 2, 6, 0 ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.8.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.1.0"
+    }
+  ],
+  "metadata": {
+    "product_type": "addon"
+  }
+}

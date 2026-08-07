@@ -1,0 +1,1567 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:player",
+      "is_summonable": false,
+      "is_spawnable": false,
+      "spawn_category": "creature"
+    },
+    "components": {
+      "minecraft:attack": {
+        "damage": 1
+      },
+      "minecraft:block_climber": {},
+      "minecraft:breathable": {
+        "generates_bubbles": false,
+        "inhale_time": 3.75,
+        "suffocate_time": -1,
+        "total_supply": 15
+      },
+      "minecraft:can_climb": {},
+      "minecraft:collision_box": {
+        "height": 1.8,
+        "width": 0.6
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:environment_sensor": {
+        "triggers": {
+          "event": "minecraft:gain_raid_omen",
+          "filters": {
+            "all_of": [
+              {
+                "subject": "self",
+                "test": "has_mob_effect",
+                "value": "bad_omen"
+              },
+              {
+                "subject": "self",
+                "test": "is_in_village",
+                "value": true
+              }
+            ]
+          }
+        }
+      },
+      "minecraft:exhaustion_values": {
+        "sprint": 0.1,
+        "jump": 0.05,
+        "attack": 0.1,
+        "damage": 0.1,
+        "heal": 6,
+        "lunge": 4,
+        "sprint_jump": 0.2,
+        "mine": 0.005,
+        "swim": 0.01,
+        "walk": 0
+      },
+      "minecraft:experience_reward": {
+        "on_death": {
+          "expression": "Math.Min(query.player_level * 7, 100)",
+          "version": 13
+        }
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "cause": "lava",
+            "damage_per_tick": 4,
+            "filters": {
+              "operator": "==",
+              "test": "in_lava",
+              "subject": "self",
+              "value": true
+            }
+          }
+        ]
+      },
+      "minecraft:insomnia": {
+        "days_until_insomnia": 3
+      },
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:loot": {
+        "table": "loot_tables/empty.json"
+      },
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:nameable": {
+        "allow_name_tag_renaming": false,
+        "always_show": true
+      },
+      "minecraft:physics": {
+        "push_towards_closest_space": true
+      },
+      "minecraft:player.exhaustion": {
+        "max": 20,
+        "value": 0
+      },
+      "minecraft:player.experience": {
+        "max": 1,
+        "value": 0
+      },
+      "minecraft:player.level": {
+        "max": 24791,
+        "value": 0
+      },
+      "minecraft:player.saturation": {
+        "max": 20,
+        "value": 5
+      },
+      "minecraft:pushable_by_block": {},
+      "minecraft:apply_knockback_rules": {
+        "presets": [
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "bouncy"
+            },
+            "horizontal_power": 0.4125,
+            "vertical_power": 0.105,
+            "vertical_velocity_cap": 8
+          },
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "regular"
+            },
+            "horizontal_power": 0.4125,
+            "vertical_power": 0.105,
+            "vertical_velocity_cap": 8
+          },
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "slow_bouncy"
+            },
+            "horizontal_power": 0.4125,
+            "vertical_power": 0.24,
+            "vertical_velocity_cap": 8
+          },
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "slow_flat"
+            },
+            "horizontal_power": 0.4125,
+            "vertical_power": 0.105,
+            "vertical_velocity_cap": 8
+          },
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "fast_flat"
+            },
+            "horizontal_power": 0.9125,
+            "vertical_power": 0.09,
+            "vertical_velocity_cap": 8
+          },
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "light"
+            },
+            "horizontal_power": 0.4125,
+            "vertical_power": 0.18,
+            "vertical_velocity_cap": 8
+          },
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "fast_sliding"
+            },
+            "horizontal_power": 0.6625,
+            "vertical_power": 0.09,
+            "vertical_velocity_cap": 8
+          },
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "slow_sliding"
+            },
+            "horizontal_power": 0.4125,
+            "vertical_power": 0.09,
+            "vertical_velocity_cap": 8
+          },
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "sticky"
+            },
+            "horizontal_power": 0.4125,
+            "vertical_power": 0.09,
+            "vertical_velocity_cap": 8
+          },
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "high_resistance"
+            },
+            "horizontal_power": 0.4125,
+            "vertical_power": 0.09,
+            "vertical_velocity_cap": 8
+          },
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "explosive"
+            },
+            "horizontal_power": 0.4125,
+            "vertical_power": 0.09,
+            "vertical_velocity_cap": 8
+          },
+          {
+            "filter": {
+              "test": "enum_property",
+              "subject": "other",
+              "domain": "minecraft:sulfur_cube_archetype",
+              "value": "hot"
+            },
+            "horizontal_power": 0.4125,
+            "vertical_power": 0.105,
+            "vertical_velocity_cap": 8
+          }
+        ]
+      },
+      "minecraft:rideable": {
+        "family_types": [
+          "parrot_tame"
+        ],
+        "pull_in_entities": true,
+        "seat_count": 2,
+        "seats": [
+          {
+            "lock_rider_rotation": 0,
+            "min_rider_count": 0,
+            "max_rider_count": 0,
+            "position": [
+              0.4,
+              -0.2,
+              -0.1
+            ]
+          },
+          {
+            "lock_rider_rotation": 0,
+            "min_rider_count": 1,
+            "max_rider_count": 2,
+            "position": [
+              -0.4,
+              -0.2,
+              -0.1
+            ]
+          }
+        ]
+      },
+      "minecraft:type_family": {
+        "family": [
+          "player"
+        ]
+      }
+    },
+    "component_groups": {
+      "minecraft:add_raid_omen": {
+        "minecraft:spell_effects": {
+          "add_effects": [
+            {
+              "display_on_screen_animation": true,
+              "duration": 30,
+              "effect": "raid_omen"
+            }
+          ],
+          "remove_effects": "bad_omen"
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": [
+            0,
+            0
+          ],
+          "time_down_event": {
+            "event": "minecraft:clear_add_raid_omen",
+            "target": "self"
+          }
+        }
+      },
+      "minecraft:clear_raid_omen_spell_effect": {
+        "minecraft:spell_effects": {}
+      },
+      "minecraft:raid_trigger": {
+        "minecraft:raid_trigger": {
+          "triggered_event": {
+            "event": "minecraft:remove_raid_trigger",
+            "target": "self"
+          }
+        }
+      },
+      "custom_cape_slot1": {
+        "minecraft:mark_variant": {
+          "value": -1
+        }
+      },
+      "custom_cape_slot2": {
+        "minecraft:mark_variant": {
+          "value": -2
+        }
+      },
+      "custom_cape_slot3": {
+        "minecraft:mark_variant": {
+          "value": -3
+        }
+      },
+      "custom_cape_slot4": {
+        "minecraft:mark_variant": {
+          "value": -4
+        }
+      },
+      "custom_cape_slot5": {
+        "minecraft:mark_variant": {
+          "value": -5
+        }
+      },
+      "custom_cape_slot6": {
+        "minecraft:mark_variant": {
+          "value": -6
+        }
+      },
+      "custom_cape_slot7": {
+        "minecraft:mark_variant": {
+          "value": -7
+        }
+      },
+      "custom_cape_slot8": {
+        "minecraft:mark_variant": {
+          "value": -8
+        }
+      },
+      "custom_cape_slot9": {
+        "minecraft:mark_variant": {
+          "value": -9
+        }
+      },
+      "custom_cape_slot10": {
+        "minecraft:mark_variant": {
+          "value": -10
+        }
+      },
+      "custom_cape_slot11": {
+        "minecraft:mark_variant": {
+          "value": -11
+        }
+      },
+      "custom_cape_slot12": {
+        "minecraft:mark_variant": {
+          "value": -12
+        }
+      },
+      "custom_cape_slot13": {
+        "minecraft:mark_variant": {
+          "value": -13
+        }
+      },
+      "custom_cape_slot14": {
+        "minecraft:mark_variant": {
+          "value": -14
+        }
+      },
+      "custom_cape_slot15": {
+        "minecraft:mark_variant": {
+          "value": -15
+        }
+      },
+      "custom_cape_slot16": {
+        "minecraft:mark_variant": {
+          "value": -16
+        }
+      },
+      "custom_cape_slot17": {
+        "minecraft:mark_variant": {
+          "value": -17
+        }
+      },
+      "custom_cape_slot18": {
+        "minecraft:mark_variant": {
+          "value": -18
+        }
+      },
+      "custom_cape_slot19": {
+        "minecraft:mark_variant": {
+          "value": -19
+        }
+      },
+      "custom_cape_slot20": {
+        "minecraft:mark_variant": {
+          "value": -20
+        }
+      },
+      "creeper15_cape": {
+        "minecraft:mark_variant": {
+          "value": 101
+        }
+      },
+      "redstone15_cape": {
+        "minecraft:mark_variant": {
+          "value": 102
+        }
+      },
+      "enderdragon15_cape": {
+        "minecraft:mark_variant": {
+          "value": 103
+        }
+      },
+      "evoker15_cape": {
+        "minecraft:mark_variant": {
+          "value": 104
+        }
+      },
+      "pinksheep15_cape": {
+        "minecraft:mark_variant": {
+          "value": 105
+        }
+      },
+      "dolphin15_cape": {
+        "minecraft:mark_variant": {
+          "value": 106
+        }
+      },
+      "panda15_cape": {
+        "minecraft:mark_variant": {
+          "value": 107
+        }
+      },
+      "villager15_cape": {
+        "minecraft:mark_variant": {
+          "value": 108
+        }
+      },
+      "bee15_cape": {
+        "minecraft:mark_variant": {
+          "value": 109
+        }
+      },
+      "piglinbrute15_cape": {
+        "minecraft:mark_variant": {
+          "value": 110
+        }
+      },
+      "axolotl15_cape": {
+        "minecraft:mark_variant": {
+          "value": 111
+        }
+      },
+      "deepslate15_cape": {
+        "minecraft:mark_variant": {
+          "value": 112
+        }
+      },
+      "frog15_cape": {
+        "minecraft:mark_variant": {
+          "value": 113
+        }
+      },
+      "camel15_cape": {
+        "minecraft:mark_variant": {
+          "value": 114
+        }
+      },
+      "breeze15_cape": {
+        "minecraft:mark_variant": {
+          "value": 115
+        }
+      },
+      "netherstar_cape": {
+        "minecraft:mark_variant": {
+          "value": 116
+        }
+      },
+      "sulfurcube_cape": {
+        "minecraft:mark_variant": {
+          "value": 117
+        }
+      },
+      "brsulfurcube_cape": {
+        "minecraft:mark_variant": {
+          "value": 118
+        }
+      },
+      "awesom": {
+        "minecraft:mark_variant": {
+          "value": 1001
+        }
+      },
+      "blonk": {
+        "minecraft:mark_variant": {
+          "value": 1002
+        }
+      },
+      "no_circle": {
+        "minecraft:mark_variant": {
+          "value": 1003
+        }
+      },
+      "nyan": {
+        "minecraft:mark_variant": {
+          "value": 1004
+        }
+      },
+      "squid": {
+        "minecraft:mark_variant": {
+          "value": 1005
+        }
+      },
+      "veterinarian": {
+        "minecraft:mark_variant": {
+          "value": 1006
+        }
+      },
+      "pan_cape": {
+        "minecraft:mark_variant": {
+          "value": 1
+        }
+      },
+      "migrator_cape": {
+        "minecraft:mark_variant": {
+          "value": 2
+        }
+      },
+      "vanilla_cape": {
+        "minecraft:mark_variant": {
+          "value": 3
+        }
+      },
+      "mc_common_cape": {
+        "minecraft:mark_variant": {
+          "value": 4
+        }
+      },
+      "founder_cape": {
+        "minecraft:mark_variant": {
+          "value": 5
+        }
+      },
+      "progress_pride_cape": {
+        "minecraft:mark_variant": {
+          "value": 6
+        }
+      },
+      "cherry_cape": {
+        "minecraft:mark_variant": {
+          "value": 7
+        }
+      },
+      "tiktok_cape": {
+        "minecraft:mark_variant": {
+          "value": 8
+        }
+      },
+      "twitch_cape": {
+        "minecraft:mark_variant": {
+          "value": 9
+        }
+      },
+      "fifteenth_year_cape": {
+        "minecraft:mark_variant": {
+          "value": 10
+        }
+      },
+      "mcc_15th_year_cape": {
+        "minecraft:mark_variant": {
+          "value": 11
+        }
+      },
+      "mojang_office_cape": {
+        "minecraft:mark_variant": {
+          "value": 12
+        }
+      },
+      "mcmovie_home_cape": {
+        "minecraft:mark_variant": {
+          "value": 13
+        }
+      },
+      "mcmovie_menace_cape": {
+        "minecraft:mark_variant": {
+          "value": 14
+        }
+      },
+      "mcmovie_yearn_cape": {
+        "minecraft:mark_variant": {
+          "value": 15
+        }
+      },
+      "copper_cape": {
+        "minecraft:mark_variant": {
+          "value": 16
+        }
+      },
+      "zombie_horse_cape": {
+        "minecraft:mark_variant": {
+          "value": 17
+        }
+      },
+      "builder_cape": {
+        "minecraft:mark_variant": {
+          "value": 18
+        }
+      },
+      "minecon2011_cape": {
+        "minecraft:mark_variant": {
+          "value": 19
+        }
+      },
+      "minecon2012_cape": {
+        "minecraft:mark_variant": {
+          "value": 20
+        }
+      },
+      "minecon2013_cape": {
+        "minecraft:mark_variant": {
+          "value": 21
+        }
+      },
+      "minecon2015_cape": {
+        "minecraft:mark_variant": {
+          "value": 22
+        }
+      },
+      "minecon2016_cape": {
+        "minecraft:mark_variant": {
+          "value": 23
+        }
+      },
+      "mc_experience_cape": {
+        "minecraft:mark_variant": {
+          "value": 24
+        }
+      },
+      "moonlight_trail_cape": {
+        "minecraft:mark_variant": {
+          "value": 25
+        }
+      },
+      "crafter_cape": {
+        "minecraft:mark_variant": {
+          "value": 26
+        }
+      },
+      "translator_cape": {
+        "minecraft:mark_variant": {
+          "value": 27
+        }
+      },
+      "cn_translator_cape": {
+        "minecraft:mark_variant": {
+          "value": 28
+        }
+      },
+      "moderator_cape": {
+        "minecraft:mark_variant": {
+          "value": 29
+        }
+      },
+      "mapmaker_cape": {
+        "minecraft:mark_variant": {
+          "value": 30
+        }
+      },
+      "scrolls_champion_cape": {
+        "minecraft:mark_variant": {
+          "value": 31
+        }
+      },
+      "cobalt_cape": {
+        "minecraft:mark_variant": {
+          "value": 32
+        }
+      },
+      "bacon_cape": {
+        "minecraft:mark_variant": {
+          "value": 33
+        }
+      },
+      "millionthsale_cape": {
+        "minecraft:mark_variant": {
+          "value": 34
+        }
+      },
+      "dannybstyle_cape": {
+        "minecraft:mark_variant": {
+          "value": 35
+        }
+      },
+      "snowman_cape": {
+        "minecraft:mark_variant": {
+          "value": 36
+        }
+      },
+      "cheapsh0t_cape": {
+        "minecraft:mark_variant": {
+          "value": 37
+        }
+      },
+      "spade_cape": {
+        "minecraft:mark_variant": {
+          "value": 38
+        }
+      },
+      "prismarine_cape": {
+        "minecraft:mark_variant": {
+          "value": 39
+        }
+      },
+      "turtle_cape": {
+        "minecraft:mark_variant": {
+          "value": 40
+        }
+      },
+      "birthday_cape": {
+        "minecraft:mark_variant": {
+          "value": 41
+        }
+      },
+      "valentine_cape": {
+        "minecraft:mark_variant": {
+          "value": 42
+        }
+      },
+      "oxeye_cape": {
+        "minecraft:mark_variant": {
+          "value": 43
+        }
+      },
+      "blueprint_cape": {
+        "minecraft:mark_variant": {
+          "value": 44
+        }
+      },
+      "mojang_cape1": {
+        "minecraft:mark_variant": {
+          "value": 45
+        }
+      },
+      "xbox360_cape": {
+        "minecraft:mark_variant": {
+          "value": 46
+        }
+      },
+      "fj_studios_cape": {
+        "minecraft:mark_variant": {
+          "value": 47
+        }
+      },
+      "mojang_cape2": {
+        "minecraft:mark_variant": {
+          "value": 48
+        }
+      },
+      "mojang_studios_cape": {
+        "minecraft:mark_variant": {
+          "value": 49
+        }
+      },
+      "christmas2010_cape": {
+        "minecraft:mark_variant": {
+          "value": 50
+        }
+      },
+      "ny2011_cape": {
+        "minecraft:mark_variant": {
+          "value": 51
+        }
+      },
+      "xbox360_1st_birthday_cape": {
+        "minecraft:mark_variant": {
+          "value": 52
+        }
+      },
+      "idaho_cape": {
+        "minecraft:mark_variant": {
+          "value": -999
+        }
+      },
+      "god_cape": {
+        "minecraft:mark_variant": {
+          "value": -1001
+        }
+      },
+      "void_cape": {
+        "minecraft:mark_variant": {
+          "value": -1000
+        }
+      },
+      "thunderstorm_cape": {
+        "minecraft:mark_variant": {
+          "value": -1002
+        }
+      },
+      "remove_cape": {
+        "minecraft:mark_variant": {
+          "value": 0
+        }
+      }
+    },
+    "events": {
+      "minecraft:clear_add_raid_omen": {
+        "add": {
+          "component_groups": [
+            "minecraft:clear_raid_omen_spell_effect"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:add_raid_omen"
+          ]
+        }
+      },
+      "minecraft:remove_raid_trigger": {
+        "remove": {
+          "component_groups": [
+            "minecraft:raid_trigger"
+          ]
+        }
+      },
+      "minecraft:gain_raid_omen": {
+        "add": {
+          "component_groups": [
+            "minecraft:add_raid_omen"
+          ]
+        }
+      },
+      "minecraft:trigger_raid": {
+        "add": {
+          "component_groups": [
+            "minecraft:raid_trigger"
+          ]
+        }
+      },
+      "customcapes:custom1": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot1"
+          ]
+        }
+      },
+      "customcapes:custom2": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot2"
+          ]
+        }
+      },
+      "customcapes:custom3": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot3"
+          ]
+        }
+      },
+      "customcapes:custom4": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot4"
+          ]
+        }
+      },
+      "customcapes:custom5": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot5"
+          ]
+        }
+      },
+      "customcapes:custom6": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot6"
+          ]
+        }
+      },
+      "customcapes:custom7": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot7"
+          ]
+        }
+      },
+      "customcapes:custom8": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot8"
+          ]
+        }
+      },
+      "customcapes:custom9": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot9"
+          ]
+        }
+      },
+      "customcapes:custom10": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot10"
+          ]
+        }
+      },
+      "customcapes:custom11": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot11"
+          ]
+        }
+      },
+      "customcapes:custom12": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot12"
+          ]
+        }
+      },
+      "customcapes:custom13": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot13"
+          ]
+        }
+      },
+      "customcapes:custom14": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot14"
+          ]
+        }
+      },
+      "customcapes:custom15": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot15"
+          ]
+        }
+      },
+      "customcapes:custom16": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot16"
+          ]
+        }
+      },
+      "customcapes:custom17": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot17"
+          ]
+        }
+      },
+      "customcapes:custom18": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot18"
+          ]
+        }
+      },
+      "customcapes:custom19": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot19"
+          ]
+        }
+      },
+      "customcapes:custom20": {
+        "add": {
+          "component_groups": [
+            "custom_cape_slot20"
+          ]
+        }
+      },
+      "customcapes:creeper15_cape": {
+        "add": {
+          "component_groups": [
+            "creeper15_cape"
+          ]
+        }
+      },
+      "customcapes:redstone15_cape": {
+        "add": {
+          "component_groups": [
+            "redstone15_cape"
+          ]
+        }
+      },
+      "customcapes:enderdragon15_cape": {
+        "add": {
+          "component_groups": [
+            "enderdragon15_cape"
+          ]
+        }
+      },
+      "customcapes:evoker15_cape": {
+        "add": {
+          "component_groups": [
+            "evoker15_cape"
+          ]
+        }
+      },
+      "customcapes:pinksheep15_cape": {
+        "add": {
+          "component_groups": [
+            "pinksheep15_cape"
+          ]
+        }
+      },
+      "customcapes:dolphin15_cape": {
+        "add": {
+          "component_groups": [
+            "dolphin15_cape"
+          ]
+        }
+      },
+      "customcapes:panda15_cape": {
+        "add": {
+          "component_groups": [
+            "panda15_cape"
+          ]
+        }
+      },
+      "customcapes:villager15_cape": {
+        "add": {
+          "component_groups": [
+            "villager15_cape"
+          ]
+        }
+      },
+      "customcapes:bee15_cape": {
+        "add": {
+          "component_groups": [
+            "bee15_cape"
+          ]
+        }
+      },
+      "customcapes:piglinbrute15_cape": {
+        "add": {
+          "component_groups": [
+            "piglinbrute15_cape"
+          ]
+        }
+      },
+      "customcapes:axolotl15_cape": {
+        "add": {
+          "component_groups": [
+            "axolotl15_cape"
+          ]
+        }
+      },
+      "customcapes:deepslate15_cape": {
+        "add": {
+          "component_groups": [
+            "deepslate15_cape"
+          ]
+        }
+      },
+      "customcapes:frog15_cape": {
+        "add": {
+          "component_groups": [
+            "frog15_cape"
+          ]
+        }
+      },
+      "customcapes:camel15_cape": {
+        "add": {
+          "component_groups": [
+            "camel15_cape"
+          ]
+        }
+      },
+      "customcapes:breeze15_cape": {
+        "add": {
+          "component_groups": [
+            "breeze15_cape"
+          ]
+        }
+      },
+      "customcapes:netherstar_cape": {
+        "add": {
+          "component_groups": [
+            "netherstar_cape"
+          ]
+        }
+      },
+      "customcapes:sulfurcube_cape": {
+        "add": {
+          "component_groups": [
+            "sulfurcube_cape"
+          ]
+        }
+      },
+      "customcapes:brsulfurcube_cape": {
+        "add": {
+          "component_groups": [
+            "brsulfurcube_cape"
+          ]
+        }
+      },
+      "aprilfoolscape:awesom": {
+        "add": {
+          "component_groups": [
+            "awesom"
+          ]
+        }
+      },
+      "aprilfoolscape:blonk": {
+        "add": {
+          "component_groups": [
+            "blonk"
+          ]
+        }
+      },
+      "aprilfoolscape:no_circle": {
+        "add": {
+          "component_groups": [
+            "no_circle"
+          ]
+        }
+      },
+      "aprilfoolscape:nyan": {
+        "add": {
+          "component_groups": [
+            "nyan"
+          ]
+        }
+      },
+      "aprilfoolscape:squid": {
+        "add": {
+          "component_groups": [
+            "squid"
+          ]
+        }
+      },
+      "aprilfoolscape:veterinarian": {
+        "add": {
+          "component_groups": [
+            "veterinarian"
+          ]
+        }
+      },
+      "capes:pan_cape": {
+        "add": {
+          "component_groups": [
+            "pan_cape"
+          ]
+        }
+      },
+      "capes:migrator_cape": {
+        "add": {
+          "component_groups": [
+            "migrator_cape"
+          ]
+        }
+      },
+      "capes:vanilla_cape": {
+        "add": {
+          "component_groups": [
+            "vanilla_cape"
+          ]
+        }
+      },
+      "capes:mc_common_cape": {
+        "add": {
+          "component_groups": [
+            "mc_common_cape"
+          ]
+        }
+      },
+      "capes:founder_cape": {
+        "add": {
+          "component_groups": [
+            "founder_cape"
+          ]
+        }
+      },
+      "capes:progress_pride_cape": {
+        "add": {
+          "component_groups": [
+            "progress_pride_cape"
+          ]
+        }
+      },
+      "capes:cherry_cape": {
+        "add": {
+          "component_groups": [
+            "cherry_cape"
+          ]
+        }
+      },
+      "capes:tiktok_cape": {
+        "add": {
+          "component_groups": [
+            "tiktok_cape"
+          ]
+        }
+      },
+      "capes:twitch_cape": {
+        "add": {
+          "component_groups": [
+            "twitch_cape"
+          ]
+        }
+      },
+      "capes:fifteenth_year_cape": {
+        "add": {
+          "component_groups": [
+            "fifteenth_year_cape"
+          ]
+        }
+      },
+      "capes:mcc_15th_year_cape": {
+        "add": {
+          "component_groups": [
+            "mcc_15th_year_cape"
+          ]
+        }
+      },
+      "capes:mojang_office_cape": {
+        "add": {
+          "component_groups": [
+            "mojang_office_cape"
+          ]
+        }
+      },
+      "capes:mcmovie_home_cape": {
+        "add": {
+          "component_groups": [
+            "mcmovie_home_cape"
+          ]
+        }
+      },
+      "capes:mcmovie_menace_cape": {
+        "add": {
+          "component_groups": [
+            "mcmovie_menace_cape"
+          ]
+        }
+      },
+      "capes:mcmovie_yearn_cape": {
+        "add": {
+          "component_groups": [
+            "mcmovie_yearn_cape"
+          ]
+        }
+      },
+      "capes:copper_cape": {
+        "add": {
+          "component_groups": [
+            "copper_cape"
+          ]
+        }
+      },
+      "capes:zombie_horse_cape": {
+        "add": {
+          "component_groups": [
+            "zombie_horse_cape"
+          ]
+        }
+      },
+      "capes:builder_cape": {
+        "add": {
+          "component_groups": [
+            "builder_cape"
+          ]
+        }
+      },
+      "capes:minecon2011_cape": {
+        "add": {
+          "component_groups": [
+            "minecon2011_cape"
+          ]
+        }
+      },
+      "capes:minecon2012_cape": {
+        "add": {
+          "component_groups": [
+            "minecon2012_cape"
+          ]
+        }
+      },
+      "capes:minecon2013_cape": {
+        "add": {
+          "component_groups": [
+            "minecon2013_cape"
+          ]
+        }
+      },
+      "capes:minecon2015_cape": {
+        "add": {
+          "component_groups": [
+            "minecon2015_cape"
+          ]
+        }
+      },
+      "capes:minecon2016_cape": {
+        "add": {
+          "component_groups": [
+            "minecon2016_cape"
+          ]
+        }
+      },
+      "capes:mc_experience_cape": {
+        "add": {
+          "component_groups": [
+            "mc_experience_cape"
+          ]
+        }
+      },
+      "capes:moonlight_trail_cape": {
+        "add": {
+          "component_groups": [
+            "moonlight_trail_cape"
+          ]
+        }
+      },
+      "capes:crafter_cape": {
+        "add": {
+          "component_groups": [
+            "crafter_cape"
+          ]
+        }
+      },
+      "capes:translator_cape": {
+        "add": {
+          "component_groups": [
+            "translator_cape"
+          ]
+        }
+      },
+      "capes:cn_translator_cape": {
+        "add": {
+          "component_groups": [
+            "cn_translator_cape"
+          ]
+        }
+      },
+      "capes:moderator_cape": {
+        "add": {
+          "component_groups": [
+            "moderator_cape"
+          ]
+        }
+      },
+      "capes:mapmaker_cape": {
+        "add": {
+          "component_groups": [
+            "mapmaker_cape"
+          ]
+        }
+      },
+      "capes:scrolls_champion_cape": {
+        "add": {
+          "component_groups": [
+            "scrolls_champion_cape"
+          ]
+        }
+      },
+      "capes:cobalt_cape": {
+        "add": {
+          "component_groups": [
+            "cobalt_cape"
+          ]
+        }
+      },
+      "capes:bacon_cape": {
+        "add": {
+          "component_groups": [
+            "bacon_cape"
+          ]
+        }
+      },
+      "capes:millionthsale_cape": {
+        "add": {
+          "component_groups": [
+            "millionthsale_cape"
+          ]
+        }
+      },
+      "capes:dannybstyle_cape": {
+        "add": {
+          "component_groups": [
+            "dannybstyle_cape"
+          ]
+        }
+      },
+      "capes:snowman_cape": {
+        "add": {
+          "component_groups": [
+            "snowman_cape"
+          ]
+        }
+      },
+      "capes:cheapsh0t_cape": {
+        "add": {
+          "component_groups": [
+            "cheapsh0t_cape"
+          ]
+        }
+      },
+      "capes:spade_cape": {
+        "add": {
+          "component_groups": [
+            "spade_cape"
+          ]
+        }
+      },
+      "capes:prismarine_cape": {
+        "add": {
+          "component_groups": [
+            "prismarine_cape"
+          ]
+        }
+      },
+      "capes:turtle_cape": {
+        "add": {
+          "component_groups": [
+            "turtle_cape"
+          ]
+        }
+      },
+      "capes:birthday_cape": {
+        "add": {
+          "component_groups": [
+            "birthday_cape"
+          ]
+        }
+      },
+      "capes:valentine_cape": {
+        "add": {
+          "component_groups": [
+            "valentine_cape"
+          ]
+        }
+      },
+      "capes:oxeye_cape": {
+        "add": {
+          "component_groups": [
+            "oxeye_cape"
+          ]
+        }
+      },
+      "capes:blueprint_cape": {
+        "add": {
+          "component_groups": [
+            "blueprint_cape"
+          ]
+        }
+      },
+      "capes:mojang_cape1": {
+        "add": {
+          "component_groups": [
+            "mojang_cape1"
+          ]
+        }
+      },
+      "capes:xbox360_cape": {
+        "add": {
+          "component_groups": [
+            "xbox360_cape"
+          ]
+        }
+      },
+      "capes:fj_studios_cape": {
+        "add": {
+          "component_groups": [
+            "fj_studios_cape"
+          ]
+        }
+      },
+      "capes:mojang_cape2": {
+        "add": {
+          "component_groups": [
+            "mojang_cape2"
+          ]
+        }
+      },
+      "capes:mojang_studios_cape": {
+        "add": {
+          "component_groups": [
+            "mojang_studios_cape"
+          ]
+        }
+      },
+      "capes:christmas2010_cape": {
+        "add": {
+          "component_groups": [
+            "christmas2010_cape"
+          ]
+        }
+      },
+      "capes:ny2011_cape": {
+        "add": {
+          "component_groups": [
+            "ny2011_cape"
+          ]
+        }
+      },
+      "capes:xbox360_1st_birthday_cape": {
+        "add": {
+          "component_groups": [
+            "xbox360_1st_birthday_cape"
+          ]
+        }
+      },
+      "capes:idaho_cape": {
+        "add": {
+          "component_groups": [
+            "idaho_cape"
+          ]
+        }
+      },
+      "specialvca:deity1": {
+        "add": {
+          "component_groups": [
+            "god_cape"
+          ]
+        }
+      },
+      "specialvca:deity0": {
+        "add": {
+          "component_groups": [
+            "void_cape"
+          ]
+        }
+      },
+      "specialvca:deity2": {
+        "add": {
+          "component_groups": [
+            "thunderstorm_cape"
+          ]
+        }
+      },
+      "capes:remove_cape": {
+        "add": {
+          "component_groups": [
+            "remove_cape"
+          ]
+        }
+      }
+    }
+  }
+}

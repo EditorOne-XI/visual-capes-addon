@@ -1,0 +1,440 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.player.custom_cape_templates": {
+      "rebuild_animation_matrices": true,
+      "arrays": {
+        "textures": {
+          "Array.capes4": [
+            "Texture.custom_cape1",
+            "Texture.custom_cape2",
+            "Texture.custom_cape3",
+            "Texture.custom_cape4",
+            "Texture.custom_cape5",
+            "Texture.custom_cape6",
+            "Texture.custom_cape7",
+            "Texture.custom_cape8",
+            "Texture.custom_cape9",
+            "Texture.custom_cape10",
+            "Texture.custom_cape11",
+            "Texture.custom_cape12",
+            "Texture.custom_cape13",
+            "Texture.custom_cape14",
+            "Texture.custom_cape15",
+            "Texture.custom_cape16",
+            "Texture.custom_cape17",
+            "Texture.custom_cape18",
+            "Texture.custom_cape19",
+            "Texture.custom_cape20"
+          ]
+        }
+      },
+      "geometry": "Geometry.cape",
+      "materials": [
+        {
+          "*": "Material.cape"
+        }
+      ],
+      "textures": [
+        "Array.capes4[((query.mark_variant * -1) - -1)]"
+      ],
+      "part_visibility": [
+        {
+          "cape": "(query.mark_variant <= -1 && query.mark_variant >= -20) && (query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll)  && !variable.map_face_icon && !query.is_spectator"
+        }
+      ],
+      "is_hurt_color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      }
+    },
+    "controller.render.player.custom_cape_presets": {
+      "rebuild_animation_matrices": true,
+      "arrays": {
+        "textures": {
+          "Array.capes3": [
+            "Texture.creeper15_cape",
+            "Texture.redstone15_cape",
+            "Texture.enderdragon15_cape",
+            "Texture.evoker15_cape",
+            "Texture.pinksheep15_cape",
+            "Texture.dolphin15_cape",
+            "Texture.panda15_cape",
+            "Texture.villager15_cape",
+            "Texture.bee15_cape",
+            "Texture.piglinbrute15_cape",
+            "Texture.axolotl15_cape",
+            "Texture.deepslate15_cape",
+            "Texture.frog15_cape",
+            "Texture.camel15_cape",
+            "Texture.breeze15_cape",
+            "Texture.netherstar_cape",
+            "Texture.sulfurcube_cape",
+            "Texture.brsulfurcube_cape"
+          ]
+        }
+      },
+      "geometry": "Geometry.cape",
+      "materials": [
+        {
+          "*": "Material.cape"
+        }
+      ],
+      "textures": [
+        "Array.capes3[(query.mark_variant - 101)]"
+      ],
+      "part_visibility": [
+        {
+          "cape": "(query.mark_variant >= 101 && query.mark_variant <= 118) && (query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll)  && !variable.map_face_icon && !query.is_spectator"
+        }
+      ],
+      "is_hurt_color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      }
+    },
+    "controller.render.player.april_fools_capes": {
+      "rebuild_animation_matrices": true,
+      "arrays": {
+        "textures": {
+          "Array.capes2": [
+            "Texture.awesom_cape",
+            "Texture.blonk_cape",
+            "Texture.no_circle_cape",
+            "Texture.nyan_cape",
+            "Texture.squid_cape",
+            "Texture.veterinarian_cape"
+          ]
+        }
+      },
+      "geometry": "Geometry.cape",
+      "materials": [
+        {
+          "*": "Material.cape"
+        }
+      ],
+      "textures": [
+        "Array.capes2[(query.mark_variant - 1001)]"
+      ],
+      "part_visibility": [
+        {
+          "cape": "(query.mark_variant >= 1001 && query.mark_variant <= 1006) && (query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll)  && !variable.map_face_icon && !query.is_spectator"
+        }
+      ],
+      "is_hurt_color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      }
+    },
+    "controller.render.player.vanilla_capes": {
+      "rebuild_animation_matrices": true,
+      "arrays": {
+        "textures": {
+          "Array.capes1": [
+            "Texture.pan_cape",
+            "Texture.migrator_cape",
+            "Texture.vanilla_cape",
+            "Texture.mc_common_cape",
+            "Texture.founder_cape",
+            "Texture.progress_pride_cape",
+            "Texture.cherry_cape",
+            "Texture.tiktok_cape",
+            "Texture.twitch_cape",
+            "Texture.fifteenth_year_cape",
+            "Texture.mcc_15th_year_cape",
+            "Texture.mojang_office_cape",
+            "Texture.mcmovie_home_cape",
+            "Texture.mcmovie_menace_cape",
+            "Texture.mcmovie_yearn_cape",
+            "Texture.copper_cape",
+            "Texture.zombie_horse_cape",
+            "Texture.builder_cape",
+            "Texture.minecon2011_cape",
+            "Texture.minecon2012_cape",
+            "Texture.minecon2013_cape",
+            "Texture.minecon2015_cape",
+            "Texture.minecon2016_cape",
+            "Texture.mc_experience_cape",
+            "Texture.moonlight_trail_cape",
+            "Texture.crafter_cape",
+            "Texture.translator_cape",
+            "Texture.cn_translator_cape",
+            "Texture.moderator_cape",
+            "Texture.mapmaker_cape",
+            "Texture.scrolls_champion_cape",
+            "Texture.cobalt_cape",
+            "Texture.bacon_cape",
+            "Texture.millionthsale_cape",
+            "Texture.dannybstyle_cape",
+            "Texture.snowman_cape",
+            "Texture.cheapsh0t_cape",
+            "Texture.spade_cape",
+            "Texture.prismarine_cape",
+            "Texture.turtle_cape",
+            "Texture.birthday_cape",
+            "Texture.valentine_cape",
+            "Texture.oxeye_cape",
+            "Texture.blueprint_cape",
+            "Texture.mojang_cape1",
+            "Texture.xbox360_cape",
+            "Texture.fj_studios_cape",
+            "Texture.mojang_cape2",
+            "Texture.mojang_studios_cape",
+            "Texture.christmas2010_cape",
+            "Texture.ny2011_cape",
+            "Texture.xbox360_1st_birthday_cape"
+          ]
+        }
+      },
+      "geometry": "Geometry.cape",
+      "materials": [
+        {
+          "*": "Material.cape"
+        }
+      ],
+      "textures": [
+        "Array.capes1[(query.mark_variant - 1)]"
+      ],
+      "part_visibility": [
+        {
+          "cape": "(query.mark_variant >= 1 && query.mark_variant <= 52) && (query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll)  && !variable.map_face_icon && !query.is_spectator"
+        }
+      ],
+      "is_hurt_color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      }
+    },
+    "controller.render.player.idaho_cape": {
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.cape",
+      "materials": [
+        {
+          "*": "Material.cape"
+        }
+      ],
+      "textures": [
+        "!query.has_cape ? Texture.idaho_cape : Texture.cape"
+      ],
+      "part_visibility": [
+        {
+          "cape": "(query.mark_variant == -999) && (query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll)  && !variable.map_face_icon && !query.is_spectator"
+        }
+      ],
+      "is_hurt_color": {
+        "r": 0,
+        "g": 1,
+        "b": 0,
+        "a": 1
+      }
+    },
+    "controller.render.player.god_cape": {
+      "rebuild_animation_matrices": true,
+      "arrays": {
+        "textures": {
+          "Array.cape_shuffle": [
+            "Texture.pan_cape",
+            "Texture.migrator_cape",
+            "Texture.vanilla_cape",
+            "Texture.mc_common_cape",
+            "Texture.founder_cape",
+            "Texture.progress_pride_cape",
+            "Texture.cherry_cape",
+            "Texture.tiktok_cape",
+            "Texture.twitch_cape",
+            "Texture.fifteenth_year_cape",
+            "Texture.mcc_15th_year_cape",
+            "Texture.mojang_office_cape",
+            "Texture.mcmovie_home_cape",
+            "Texture.mcmovie_menace_cape",
+            "Texture.mcmovie_yearn_cape",
+            "Texture.copper_cape",
+            "Texture.zombie_horse_cape",
+            "Texture.builder_cape",
+            "Texture.minecon2011_cape",
+            "Texture.minecon2012_cape",
+            "Texture.minecon2013_cape",
+            "Texture.minecon2015_cape",
+            "Texture.minecon2016_cape",
+            "Texture.mc_experience_cape",
+            "Texture.moonlight_trail_cape",
+            "Texture.crafter_cape",
+            "Texture.translator_cape",
+            "Texture.cn_translator_cape",
+            "Texture.moderator_cape",
+            "Texture.mapmaker_cape",
+            "Texture.scrolls_champion_cape",
+            "Texture.cobalt_cape",
+            "Texture.bacon_cape",
+            "Texture.millionthsale_cape",
+            "Texture.dannybstyle_cape",
+            "Texture.snowman_cape",
+            "Texture.cheapsh0t_cape",
+            "Texture.spade_cape",
+            "Texture.prismarine_cape",
+            "Texture.turtle_cape",
+            "Texture.birthday_cape",
+            "Texture.valentine_cape",
+            "Texture.oxeye_cape",
+            "Texture.blueprint_cape",
+            "Texture.mojang_cape1",
+            "Texture.xbox360_cape",
+            "Texture.fj_studios_cape",
+            "Texture.mojang_cape2",
+            "Texture.mojang_studios_cape",
+            "Texture.christmas2010_cape",
+            "Texture.ny2011_cape",
+            "Texture.xbox360_1st_birthday_cape",
+            "Texture.idaho_cape"
+          ]
+        }
+      },
+      "geometry": "Geometry.cape",
+      "materials": [
+        {
+          "*": "Material.cape"
+        }
+      ],
+      "textures": [
+        "Array.cape_shuffle[(query.anim_time * 10)]"
+      ],
+      "part_visibility": [
+        {
+          "cape": "(query.mark_variant == -1001) && (query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll)  && !variable.map_face_icon && !query.is_spectator"
+        }
+      ],
+      "is_hurt_color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 0.7
+      }
+    },
+    "controller.render.player.void_cape": {
+      "rebuild_animation_matrices": true,
+      "arrays": {
+        "textures": {
+          "Array.void_pop": [
+            "Texture.void_cape_f1",
+            "Texture.void_cape_f2",
+            "Texture.void_cape_f3",
+            "Texture.void_cape_f4",
+            "Texture.void_cape_f5",
+            "Texture.void_cape_f6",
+            "Texture.void_cape_f7",
+            "Texture.void_cape_f8",
+            "Texture.void_cape_f9",
+            "Texture.void_cape_f10",
+            "Texture.void_cape_f11",
+            "Texture.void_cape_f12",
+            "Texture.void_cape_f13",
+            "Texture.void_cape_f14",
+            "Texture.void_cape_f15",
+            "Texture.void_cape_f16",
+            "Texture.void_cape_f17",
+            "Texture.void_cape_f18",
+            "Texture.void_cape_f19",
+            "Texture.void_cape_f20",
+            "Texture.void_cape_f21",
+            "Texture.void_cape_f22",
+            "Texture.void_cape_f23",
+            "Texture.void_cape_f24",
+            "Texture.void_cape_f25",
+            "Texture.void_cape_f26",
+            "Texture.void_cape_f27",
+            "Texture.void_cape_f28",
+            "Texture.void_cape_f29",
+            "Texture.void_cape_f30",
+            "Texture.void_cape_f31",
+            "Texture.void_cape_f32",
+            "Texture.void_cape_f33",
+            "Texture.void_cape_f34",
+            "Texture.void_cape_f35",
+            "Texture.void_cape_f36",
+            "Texture.void_cape_f37",
+            "Texture.void_cape_f38",
+            "Texture.void_cape_f39",
+            "Texture.void_cape_f40",
+            "Texture.void_cape_f41",
+            "Texture.void_cape_f42",
+            "Texture.void_cape_f43",
+            "Texture.void_cape_f44",
+            "Texture.void_cape_f45",
+            "Texture.void_cape_f46"
+          ]
+        }
+      },
+      "geometry": "Geometry.cape",
+      "materials": [
+        {
+          "*": "Material.cape"
+        }
+      ],
+      "textures": [
+        "Array.void_pop[(query.anim_time * 10)]"
+      ],
+      "part_visibility": [
+        {
+          "cape": "(query.mark_variant == -1000) && (query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll)  && !variable.map_face_icon && !query.is_spectator"
+        }
+      ],
+      "is_hurt_color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.7
+      }
+    },
+    "controller.render.player.thunderstorm_cape": {
+      "rebuild_animation_matrices": true,
+      "arrays": {
+        "textures": {
+          "Array.rain": [
+            "Texture.thunderstorm_cape_f1",
+            "Texture.thunderstorm_cape_f2",
+            "Texture.thunderstorm_cape_f3",
+            "Texture.thunderstorm_cape_f4",
+            "Texture.thunderstorm_cape_f5",
+            "Texture.thunderstorm_cape_f6",
+            "Texture.thunderstorm_cape_f7",
+            "Texture.thunderstorm_cape_f8",
+            "Texture.thunderstorm_cape_f9",
+            "Texture.thunderstorm_cape_f10",
+            "Texture.thunderstorm_cape_f11",
+            "Texture.thunderstorm_cape_f12",
+            "Texture.thunderstorm_cape_f13",
+            "Texture.thunderstorm_cape_f14"
+          ]
+        }
+      },
+      "geometry": "Geometry.cape",
+      "materials": [
+        {
+          "*": "Material.cape"
+        }
+      ],
+      "textures": [
+        "Array.rain[(query.anim_time * 10)]"
+      ],
+      "part_visibility": [
+        {
+          "cape": "(query.mark_variant == -1002) && (query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll)  && !variable.map_face_icon && !query.is_spectator"
+        }
+      ],
+      "is_hurt_color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 0.7
+      }
+    }
+  }
+}
