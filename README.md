@@ -114,10 +114,10 @@ Please refer to this [License](LICENSE.md).
 
 ## Contributing
 
-To supprt development of this add-on, refer to [here](CONTRIBUTING.md).
+To support development of this add-on, refer to [here](CONTRIBUTING.md).
 
 
-## Acknoledgment
+## Acknowledgment
 
 - [Termux](https://github.com/termux/termux-app)
 - [NodeJS](https://nodejs.org)

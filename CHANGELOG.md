@@ -53,7 +53,7 @@
 * Updated Visual Capes Add-on UI section.
 
 > [!IMPORTANT]
-> There are changes made with the capes to implement full license of this add-on and and comply with [Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines).
+> There are changes made with the capes to implement full license of this add-on and comply with [Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines).
 
 > [!WARNING]
 > Removed **Version Selection** from pack settings because version variation would likely to mismatch Behavior Pack and Extension Pack. And I am having issues sourcing JSON files.
@@ -66,8 +66,8 @@
   * To: 64 Experience Bottle and 16 Enchanted Golden Apple.
 * Item name **Reward Convert** can be now named to any item.
 * Optimized Cape classes from scripts.
-* Added **Language (Locale)** support to scripts, scripts now uses `.lang` files but not every text is translatable.
-* Adjusted Capes Forms where back button are added, and **X** button exits the form.
+* Added **Language (Locale)** support to scripts, scripts now use `.lang` files but not every text is translatable.
+* Adjusted Capes Forms where back buttons are added, and the X button exits the form.
 * Added Custom Commands:
   * `/cape`
   * `/opcape` (Shifted from `/scriptevent` command)

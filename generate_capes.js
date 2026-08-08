@@ -5,10 +5,7 @@
 | NodeJS IS REQUIRED TO RUN THIS SCRIPT
 | - Autocomplete Internal JSON Codes.
 | - by EditorOne XI | EditorOne5312 * All rights reserved.
-|   $ Youtube: EditorOne XI
-|   $ Reddit: u/EditorOneXI
-|   $ Curseforge: EditorOne_XI
-|   $ MCPEDL: EditorOne
+|   $ GitHub: EditorOne-XI
 | > IF YOU HAVE THIS FILE, DELETE IMMEDIATELY :)
 | > FOR DEVELOPMENT USE ONLY.
 |
@@ -42,7 +39,9 @@ const savefiles = {
   RP_p:   "./bundle/VisualCapesRP/subpacks/default/entity/player.entity.json",
   RP_e:   "./bundle/VisualCapesRP/attachables/elytra.json",
   RP_c:   "./bundle/VisualCapesRP/render_controllers/cape.render_controllers.json",
-  RP_ce:  "./bundle/VisualCapesRP/render_controllers/elytra.render_controllers.json"
+  RP_ce:  "./bundle/VisualCapesRP/render_controllers/elytra.render_controllers.json",
+  BP_js:  "./bundle/VisualCapesBP/scripts/offset.js",
+  Ext_js: "./bundle/VisualCapesExt/scripts/offset.js"
 }
 
 
@@ -1449,6 +1448,20 @@ function capeUI() {
   };
 };
 
+function capeOffsetJS(increment) {
+  try {
+    const data = `export const offset = ${increment};`;
+    mkdirSync(dirname(savefiles.BP_js), { recursive: true });
+    mkdirSync(dirname(savefiles.Ext_js), { recursive: true });
+    writeFileSync(savefiles.BP_js, data);
+    writeFileSync(savefiles.Ext_js, data);
+    return true;
+  } catch (err) {
+    console.error("Failed to write offset.js");
+    return false;
+  }
+}
+
 ////// MINECRAFT SERVER FORM UI //////
 
 // ActionFormData UI bindings.
@@ -1523,6 +1536,9 @@ if (prefix == "br-vca") {
       break;
     case 'mcf':
       capeMCF();
+      break;
+    case 'incrjs':
+      capeOffsetJS(argInc);
       break;
     case 'dn':
       readDiagn(parseInt(consoleArgs[2] ?? 1), parseInt(consoleArgs[3] ?? 2));
@@ -1610,6 +1626,7 @@ generate_capes.js br-vca legacy <increment> <legacy:selection>
     RP-ce   = Cape Elytra Render Controllers
     T       = Capes' number with calculations
     mcf     = Auto generate .mcfunction for capes
+    incrjs  = Set offset.js increment
     dn      = Diagnostic Decoder
     legacy  = Legacy Functions
 

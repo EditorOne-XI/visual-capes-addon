@@ -5,7 +5,6 @@ Using the extension pack of the add-on utilizes complex scripting features to ma
 Choosing a cape with the Cape Menu is implemented here. In order to open the menu, get yourself a Pumpkin Pie and rename it to the anvil as **Cape Selector**. After renaming, you can now start choosing your capes by right-clicking the pie!
 
 <img src="./res/examples/rarity/cape_selector.png" alt="cape_selector" width="70%" align="center">
-<img src="./res/examples/start_menu.png" alt="start_menu_ui" width="70%" align="center">
 <img src="./res/menu.jpg" alt="menu_ui" width="70%" align="center">
 <br>
 
@@ -25,9 +24,9 @@ This pack extension has its own settings to select which mode you want to implem
 
 # Rarity System Feature
 
-An add-on's system feature where cape rarities are implemented as true rarity within the world where capes requires "privilege" to be equip. Capes having real rarity can be a game achievement you can share with other players.
+An add-on's system feature where cape rarities are implemented as true rarity within the world where capes require 'privilege' to be equipped. Capes having real rarity can be a game achievement you can share with other players.
 
-Rarity System by default only reduces players' access to capes where operators/admins has the ability to grant or revoke you a cape or a rarity.
+Rarity System by default only reduces players' access to capes where operators/admins have the ability to grant or revoke you a cape or a rarity.
 
 To gain access to the **Operator's Cape Menu**, use this custom command provided below. Both add and remove operators are available.
 
@@ -43,7 +42,7 @@ This is how the operator's menu looks; the two methods you can see are already l
 <img src="./res/examples/rarity/op_menu.png" alt="menu_ui" width="70%" align="center">
 <br>
 
-Operators of Cape Menu can deliver any player with any cape or raraity privilege. This what should look like when you received a cape from an operator:
+Operators of Cape Menu can deliver any player with any cape or rarity privilege. This is what it should look like when you receive a cape from an operator:
 
 <img src="./res/examples/rarity/confirm_menu.png" alt="menu_ui" width="70%" align="center">
 <br>
@@ -53,7 +52,7 @@ Operators of Cape Menu can deliver any player with any cape or raraity privilege
 
 This mode is designed specifically for survival worlds because of the **Cape Reward** feature. It lets you grant tiered potency effects "buffs" with infinite duration, or lets you activate unique buffs. These buffs allows players to be stronger than before, where they can no longer fear such dangerous situations or combats.
 
-To get a buff and essetially grant privilege to equip higher rarity capes. Rename any item as **Reward Convert** and right-clicking to the item opens the menu.
+To get a buff and essentially grant privilege to equip higher-rarity capes, rename any item to **Reward Convert** and right‑click the item to open the menu.
 
 <img src="./res/examples/rarity/reward_convert.png" alt="reward_convert" width="70%" align="center">
 <br><img src="./res/examples/rarity/rewards_menu.png" alt="rewards_menu" width="70%" align="center">
@@ -66,11 +65,11 @@ Another way of accessing the menu is to use the custom `/caperegister` command. 
 
 * Required items to register should be in player's inventory.
 * Buffs only activate when the equipped cape has the same rarity as the registered buffs.
-* Buffs only decays when player dies.
+* Buffs only decay when the player dies.
 * Custom Buffs are activated using Heavy Core in inventory.
-* Registered buffs are displayed to Cape Menu, buffs' rarity are also shown.
+* Registered buffs are displayed in the Cape Menu; the buffs' rarities are also shown.
 
-This is an example of capes list from Vanilla Cape Menu when granted an Epic rarity privilege:
+This is an example of the capes list from Vanilla Cape Menu when granted an Epic rarity privilege:
 
 <img src="./res/examples/rarity/cape_list_epic.png" alt="caperegister_command" width="70%" align="center">
 <br>
