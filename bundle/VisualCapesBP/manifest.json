@@ -1,17 +1,17 @@
 {
   "format_version": 2,
   "header": {
-    "description": "Made by EditorOne5312 - v2.6.0 - Note: This Behavior Pack doesn't support packs that uses 'player.json' file. If you really want to merge this pack then do it manually.",
+    "description": "Made by EditorOne5312 - v2.7.0 - Note: This Behavior Pack doesn't support packs that uses 'player.json' file. If you really want to merge this pack then do it manually.",
     "name": "§bVisual Capes Addon §9BP§r",
     "uuid": "90b53ed4-a651-4fff-bfb6-48f5734b6cb2",
-    "version": [ 2, 6, 0 ],
+    "version": [ 2, 7, 0 ],
     "min_engine_version": [ 1, 26, 30 ]
   },
   "modules": [
     {
       "type": "data",
       "uuid": "19709616-be40-4a8d-9f97-2bccf714d1e1",
-      "version": [ 2, 6, 0 ]
+      "version": [ 2, 7, 0 ]
     },
     {
       "type": "script",
@@ -24,7 +24,7 @@
   "dependencies": [
     {
       "uuid": "676fbaf7-29f0-4210-8f91-c9804d1eeae2",
-      "version": [ 2, 6, 0 ]
+      "version": [ 2, 7, 0 ]
     },
     {
       "module_name": "@minecraft/server",

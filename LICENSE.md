@@ -252,6 +252,10 @@ bundle/VisualCapesRP/textures/capes/
 │   ├── icon-elytra.png
 │   ├── icon.png
 │   └── texture.png
+├── aurora
+│   ├── icon-elytra.png
+│   ├── icon.png
+│   └── texture.png
 ├── bacon
 │   ├── icon.png
 │   └── texture.png
@@ -309,6 +313,10 @@ bundle/VisualCapesRP/textures/capes/
 │   ├── icon.png
 │   └── texture.png
 ├── founder
+│   ├── icon-elytra.png
+│   ├── icon.png
+│   └── texture.png
+├── hero
 │   ├── icon-elytra.png
 │   ├── icon.png
 │   └── texture.png
@@ -418,6 +426,10 @@ bundle/VisualCapesRP/textures/capes/
 │   ├── icon-elytra.png
 │   ├── icon.png
 │   └── texture.png
+├── snowgolem
+│   ├── icon-elytra.png
+│   ├── icon.png
+│   └── texture.png
 ├── snowman
 │   ├── icon-elytra.png
 │   ├── icon.png
@@ -435,6 +447,10 @@ bundle/VisualCapesRP/textures/capes/
 ├── turnaround
 │   └── icon.png
 ├── turtle
+│   ├── icon-elytra.png
+│   ├── icon.png
+│   └── texture.png
+├── twisted
 │   ├── icon-elytra.png
 │   ├── icon.png
 │   └── texture.png

@@ -607,6 +607,38 @@ new CapeRegister([
     classification: 'vanilla'
   },
   {
+    // v2.7.0
+    icon: 'textures/capes/aurora/icon',
+    name: 'Aurora Cape',
+    type: 'capes:aurora_cape',
+    rarity_value: 1,
+    classification: 'vanilla'
+  },
+  {
+    // v2.7.0
+    icon: 'textures/capes/hero/icon',
+    name: 'Hero Cape',
+    type: 'capes:hero_cape',
+    rarity_value: 4,
+    classification: 'vanilla'
+  },
+  {
+    // v2.7.0
+    icon: 'textures/capes/twisted/icon',
+    name: 'Twisted Cape',
+    type: 'capes:twisted_cape',
+    rarity_value: 4,
+    classification: 'vanilla'
+  },
+  {
+    // v2.7.0
+    icon: 'textures/capes/snowgolem/icon',
+    name: 'Snow Golem Cape',
+    type: 'capes:snowgolem_cape',
+    rarity_value: 3,
+    classification: 'vanilla'
+  },
+  {
     icon: 'textures/capes/minecon2011/icon',
     name: 'MINECON 2011 Cape',
     type: 'capes:minecon2011_cape',

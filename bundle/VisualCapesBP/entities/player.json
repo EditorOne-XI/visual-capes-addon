@@ -56,10 +56,7 @@
         "walk": 0
       },
       "minecraft:experience_reward": {
-        "on_death": {
-          "expression": "Math.Min(query.player_level * 7, 100)",
-          "version": 13
-        }
+        "on_death": "Math.Min(query.player_level * 7, 100)"
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -118,9 +115,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "bouncy"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.105,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -129,9 +130,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "regular"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.105,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -140,9 +145,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "slow_bouncy"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.24,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -151,9 +160,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "slow_flat"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.105,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -162,9 +175,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "fast_flat"
             },
-            "horizontal_power": 0.9125,
+            "horizontal_power": 0.365,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -173,9 +190,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "light"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.18,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -184,9 +205,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "fast_sliding"
             },
-            "horizontal_power": 0.6625,
+            "horizontal_power": 0.265,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -195,9 +220,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "slow_sliding"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -206,9 +235,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "sticky"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -217,9 +250,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "high_resistance"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -228,9 +265,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "explosive"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -239,9 +280,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "hot"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.105,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           }
         ]
       },
@@ -625,174 +670,194 @@
           "value": 18
         }
       },
-      "minecon2011_cape": {
+      "aurora_cape": {
         "minecraft:mark_variant": {
           "value": 19
         }
       },
-      "minecon2012_cape": {
+      "hero_cape": {
         "minecraft:mark_variant": {
           "value": 20
         }
       },
-      "minecon2013_cape": {
+      "twisted_cape": {
         "minecraft:mark_variant": {
           "value": 21
         }
       },
-      "minecon2015_cape": {
+      "snowgolem_cape": {
         "minecraft:mark_variant": {
           "value": 22
         }
       },
-      "minecon2016_cape": {
+      "minecon2011_cape": {
         "minecraft:mark_variant": {
           "value": 23
         }
       },
-      "mc_experience_cape": {
+      "minecon2012_cape": {
         "minecraft:mark_variant": {
           "value": 24
         }
       },
-      "moonlight_trail_cape": {
+      "minecon2013_cape": {
         "minecraft:mark_variant": {
           "value": 25
         }
       },
-      "crafter_cape": {
+      "minecon2015_cape": {
         "minecraft:mark_variant": {
           "value": 26
         }
       },
-      "translator_cape": {
+      "minecon2016_cape": {
         "minecraft:mark_variant": {
           "value": 27
         }
       },
-      "cn_translator_cape": {
+      "mc_experience_cape": {
         "minecraft:mark_variant": {
           "value": 28
         }
       },
-      "moderator_cape": {
+      "moonlight_trail_cape": {
         "minecraft:mark_variant": {
           "value": 29
         }
       },
-      "mapmaker_cape": {
+      "crafter_cape": {
         "minecraft:mark_variant": {
           "value": 30
         }
       },
-      "scrolls_champion_cape": {
+      "translator_cape": {
         "minecraft:mark_variant": {
           "value": 31
         }
       },
-      "cobalt_cape": {
+      "cn_translator_cape": {
         "minecraft:mark_variant": {
           "value": 32
         }
       },
-      "bacon_cape": {
+      "moderator_cape": {
         "minecraft:mark_variant": {
           "value": 33
         }
       },
-      "millionthsale_cape": {
+      "mapmaker_cape": {
         "minecraft:mark_variant": {
           "value": 34
         }
       },
-      "dannybstyle_cape": {
+      "scrolls_champion_cape": {
         "minecraft:mark_variant": {
           "value": 35
         }
       },
-      "snowman_cape": {
+      "cobalt_cape": {
         "minecraft:mark_variant": {
           "value": 36
         }
       },
-      "cheapsh0t_cape": {
+      "bacon_cape": {
         "minecraft:mark_variant": {
           "value": 37
         }
       },
-      "spade_cape": {
+      "millionthsale_cape": {
         "minecraft:mark_variant": {
           "value": 38
         }
       },
-      "prismarine_cape": {
+      "dannybstyle_cape": {
         "minecraft:mark_variant": {
           "value": 39
         }
       },
-      "turtle_cape": {
+      "snowman_cape": {
         "minecraft:mark_variant": {
           "value": 40
         }
       },
-      "birthday_cape": {
+      "cheapsh0t_cape": {
         "minecraft:mark_variant": {
           "value": 41
         }
       },
-      "valentine_cape": {
+      "spade_cape": {
         "minecraft:mark_variant": {
           "value": 42
         }
       },
-      "oxeye_cape": {
+      "prismarine_cape": {
         "minecraft:mark_variant": {
           "value": 43
         }
       },
-      "blueprint_cape": {
+      "turtle_cape": {
         "minecraft:mark_variant": {
           "value": 44
         }
       },
-      "mojang_cape1": {
+      "birthday_cape": {
         "minecraft:mark_variant": {
           "value": 45
         }
       },
-      "xbox360_cape": {
+      "valentine_cape": {
         "minecraft:mark_variant": {
           "value": 46
         }
       },
-      "fj_studios_cape": {
+      "oxeye_cape": {
         "minecraft:mark_variant": {
           "value": 47
         }
       },
-      "mojang_cape2": {
+      "blueprint_cape": {
         "minecraft:mark_variant": {
           "value": 48
         }
       },
-      "mojang_studios_cape": {
+      "mojang_cape1": {
         "minecraft:mark_variant": {
           "value": 49
         }
       },
-      "christmas2010_cape": {
+      "xbox360_cape": {
         "minecraft:mark_variant": {
           "value": 50
         }
       },
-      "ny2011_cape": {
+      "fj_studios_cape": {
         "minecraft:mark_variant": {
           "value": 51
         }
       },
-      "xbox360_1st_birthday_cape": {
+      "mojang_cape2": {
         "minecraft:mark_variant": {
           "value": 52
+        }
+      },
+      "mojang_studios_cape": {
+        "minecraft:mark_variant": {
+          "value": 53
+        }
+      },
+      "christmas2010_cape": {
+        "minecraft:mark_variant": {
+          "value": 54
+        }
+      },
+      "ny2011_cape": {
+        "minecraft:mark_variant": {
+          "value": 55
+        }
+      },
+      "xbox360_1st_birthday_cape": {
+        "minecraft:mark_variant": {
+          "value": 56
         }
       },
       "idaho_cape": {
@@ -1286,6 +1351,34 @@
         "add": {
           "component_groups": [
             "builder_cape"
+          ]
+        }
+      },
+      "capes:aurora_cape": {
+        "add": {
+          "component_groups": [
+            "aurora_cape"
+          ]
+        }
+      },
+      "capes:hero_cape": {
+        "add": {
+          "component_groups": [
+            "hero_cape"
+          ]
+        }
+      },
+      "capes:twisted_cape": {
+        "add": {
+          "component_groups": [
+            "twisted_cape"
+          ]
+        }
+      },
+      "capes:snowgolem_cape": {
+        "add": {
+          "component_groups": [
+            "snowgolem_cape"
           ]
         }
       },

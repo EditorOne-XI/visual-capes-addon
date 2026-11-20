@@ -2,6 +2,7 @@
 
 | Versions | Major Update |
 | :---: | :--- |
+| [2.7.0](#v270) | Fixed Behavior Pack |
 | [2.6.0](#v260) | Vibrant Visuals Support |
 | [2.5.0](#v250-cape-achievements) | GitHub Migration |
 | [2.1.0](#v210) | Deity Rarity |
@@ -10,10 +11,20 @@
 | [1.0.0](#v100-first-release) | First Release |
 
 
+## v2.7.0
+
+* Added 4 Vanilla Minecraft Capes:
+  * Aurora Cape
+  * Hero Cape
+  * Twisted Cape
+  * Snow Golem Cape
+* Updated player.json to v26.30 (v1.26.30), implemented preset schema features that was in the "beta" format version.
+
+
 ## v2.6.0
 
 * Added enabling **Vibrant Visuals** support.
-* Removed from player.json:`minecraft:apply_knockback_rules` because they are using beta preset features: (v1.26.30)
+* Removed from player.json:`minecraft:apply_knockback_rules` because they are using "beta" format version preset schemas: (v1.26.30)
   * `extra_knockback_approach`
   * `horizontal_hit_angle_scale`
   * `scale_previous_velocity`

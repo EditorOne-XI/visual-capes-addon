@@ -21,7 +21,8 @@ const dmNhRGV2RTFfWEk = "§e[Visual Capes Add-on Dev]§r";
 /**
   * Plug this to VisualCapes.js to work:
   * 
-  * import { dmNhRGV2RTFfWEk, runTimer, consoleMap } from 'dev_forms.js';
+  * import { dmNhRGV2RTFfWEk, runTimer, consoleMap } from './dev_forms.js'
+  * import { turnaroundByChance, voidPlayerMap, thunderstormPlayerMap } from './common/deity.js'
   * 
   * Uncomment the code block of if (dmNhRGV2RTFfWEk) { ... }
   * Also plug this line to the manifest.json main bracket:

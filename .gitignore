@@ -16,7 +16,7 @@ bundle/VisualCapesRP/textures/particle/
 # testings
 /elytra.json
 /elytra.render_controllers.json
-/*.player.json
+/vanilla.*.json
 /player.entity*.json
 _graphics/
 _vanilla/

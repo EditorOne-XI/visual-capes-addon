@@ -25,7 +25,7 @@ function import_vca() {
 
 function completeImport() {
     local devJS
-    devJS=$(find . -name dev_forms.js)
+    devJS=$(find . -type f -name dev_forms.js)
     if [ ! -f "$devJS" ]; then
         echo "Visual Capes Add-on bundle is done."
         exit 1

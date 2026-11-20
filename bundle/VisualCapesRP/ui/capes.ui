@@ -35,7 +35,7 @@
       },
       {
         "features_list@capes_common_ui.description_label": {
-          "$description": "- 73 Designed Capes\n    > 48 Vanilla Minecraft Capes\n    > 19 Custom Capes\n    > 6 April Fools Exclusive Capes\n- 10 Customizable Capes (Templates)\n- Operator's Menu"
+          "$description": "- 77 Designed Capes\n    > 52 Vanilla Minecraft Capes\n    > 19 Custom Capes\n    > 6 April Fools Exclusive Capes\n- 10 Customizable Capes (Templates)\n- Operator's Menu"
         }
       },
       {
@@ -350,6 +350,42 @@
           "$cape_namespace": "capes:builder_cape",
           "$cape_texture": "builder/icon",
           "$elytra_texture": "builder/icon-elytra"
+        }
+      },
+      {
+        "aurora_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "aurora_cape_toggle",
+          "$cape_name": "Aurora Cape",
+          "$cape_namespace": "capes:aurora_cape",
+          "$cape_texture": "aurora/icon",
+          "$elytra_texture": "aurora/icon-elytra"
+        }
+      },
+      {
+        "hero_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "hero_cape_toggle",
+          "$cape_name": "Hero Cape",
+          "$cape_namespace": "capes:hero_cape",
+          "$cape_texture": "hero/icon",
+          "$elytra_texture": "hero/icon-elytra"
+        }
+      },
+      {
+        "twisted_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "twisted_cape_toggle",
+          "$cape_name": "Twisted Cape",
+          "$cape_namespace": "capes:twisted_cape",
+          "$cape_texture": "twisted/icon",
+          "$elytra_texture": "twisted/icon-elytra"
+        }
+      },
+      {
+        "snowgolem_cape@capes_common_ui.cape_display_template": {
+          "$cape_toggle": "snowgolem_cape_toggle",
+          "$cape_name": "Snow Golem Cape",
+          "$cape_namespace": "capes:snowgolem_cape",
+          "$cape_texture": "snowgolem/icon",
+          "$elytra_texture": "snowgolem/icon-elytra"
         }
       },
       {

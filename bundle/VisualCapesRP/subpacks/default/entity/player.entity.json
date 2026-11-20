@@ -38,6 +38,10 @@
         "mc_experience_cape": "textures/capes/mcExperience/texture",
         "moonlight_trail_cape": "textures/capes/moonlightTrail/texture",
         "crafter_cape": "textures/capes/crafter/texture",
+        "aurora_cape": "textures/capes/aurora/texture",
+        "hero_cape": "textures/capes/hero/texture",
+        "twisted_cape": "textures/capes/twisted/texture",
+        "snowgolem_cape": "textures/capes/snowgolem/texture",
         "translator_cape": "textures/capes/crowdinTranslator/texture",
         "cn_translator_cape": "textures/capes/chineseTranslator/texture",
         "moderator_cape": "textures/capes/bugTracker/texture",
@@ -350,7 +354,7 @@
           "controller.render.player.map": "variable.map_face_icon"
         },
         {
-          "controller.render.player.vanilla_capes": "!variable.is_first_person && !variable.map_face_icon && !query.is_spectator && (query.mark_variant >= 1 && query.mark_variant <= 52)"
+          "controller.render.player.vanilla_capes": "!variable.is_first_person && !variable.map_face_icon && !query.is_spectator && (query.mark_variant >= 1 && query.mark_variant <= 56)"
         },
         {
           "controller.render.player.april_fools_capes": "!variable.is_first_person && !variable.map_face_icon && !query.is_spectator && (query.mark_variant >= 1001 && query.mark_variant <= 1006)"

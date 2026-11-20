@@ -155,6 +155,10 @@
             "Texture.copper_cape",
             "Texture.zombie_horse_cape",
             "Texture.builder_cape",
+            "Texture.aurora_cape",
+            "Texture.hero_cape",
+            "Texture.twisted_cape",
+            "Texture.snowgolem_cape",
             "Texture.minecon2011_cape",
             "Texture.minecon2012_cape",
             "Texture.minecon2013_cape",
@@ -203,7 +207,7 @@
       ],
       "part_visibility": [
         {
-          "cape": "(query.mark_variant >= 1 && query.mark_variant <= 52) && (query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll)  && !variable.map_face_icon && !query.is_spectator"
+          "cape": "(query.mark_variant >= 1 && query.mark_variant <= 56) && (query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll)  && !variable.map_face_icon && !query.is_spectator"
         }
       ],
       "is_hurt_color": {
@@ -259,6 +263,10 @@
             "Texture.copper_cape",
             "Texture.zombie_horse_cape",
             "Texture.builder_cape",
+            "Texture.aurora_cape",
+            "Texture.hero_cape",
+            "Texture.twisted_cape",
+            "Texture.snowgolem_cape",
             "Texture.minecon2011_cape",
             "Texture.minecon2012_cape",
             "Texture.minecon2013_cape",

@@ -1,17 +1,17 @@
 {
   "format_version": 2,
   "header": {
-    "description": "v2.6.0 - Made by EditorOne5312\nMake sure to put this above the \"Visual Capes BP\".",
+    "description": "v2.7.0 - Made by EditorOne5312\nMake sure to put this above the \"Visual Capes BP\".",
     "name": "§bVisual Capes Addon §9BP§r §e(Extension)§r",
     "uuid": "7dfa838a-e8aa-44bc-8728-30e594e0f0ac",
-    "version": [ 2, 6, 0 ],
+    "version": [ 2, 7, 0 ],
     "min_engine_version": [ 1, 26, 30 ]
   },
   "modules": [
     {
       "type": "data",
       "uuid": "54c0cbd9-210b-4358-8772-7ecd59be336c",
-      "version": [ 2, 6, 0 ]
+      "version": [ 2, 7, 0 ]
     },
     {
 			"type": "script",
@@ -47,7 +47,7 @@
   "dependencies": [
     {
       "uuid": "90b53ed4-a651-4fff-bfb6-48f5734b6cb2",
-      "version": [ 2, 6, 0 ]
+      "version": [ 2, 7, 0 ]
     },
     {
       "module_name": "@minecraft/server",

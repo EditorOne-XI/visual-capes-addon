@@ -426,6 +426,38 @@ const vanillaCapesList = [
     classification: 'vanilla'
   },
   {
+    // v2.7.0
+    icon: 'textures/capes/aurora/icon',
+    name: 'Aurora Cape',
+    type: 'capes:aurora_cape',
+    rarity_value: 1,
+    classification: 'vanilla'
+  },
+  {
+    // v2.7.0
+    icon: 'textures/capes/hero/icon',
+    name: 'Hero Cape',
+    type: 'capes:hero_cape',
+    rarity_value: 4,
+    classification: 'vanilla'
+  },
+  {
+    // v2.7.0
+    icon: 'textures/capes/twisted/icon',
+    name: 'Twisted Cape',
+    type: 'capes:twisted_cape',
+    rarity_value: 4,
+    classification: 'vanilla'
+  },
+  {
+    // v2.7.0
+    icon: 'textures/capes/snowgolem/icon',
+    name: 'Snow Golem Cape',
+    type: 'capes:snowgolem_cape',
+    rarity_value: 3,
+    classification: 'vanilla'
+  },
+  {
     icon: 'textures/capes/minecon2011/icon',
     name: 'MINECON 2011 Cape',
     type: 'capes:minecon2011_cape',
@@ -955,6 +987,10 @@ const TEXTURES = {
         "mc_experience_cape": "textures/capes/mcExperience/texture",
         "moonlight_trail_cape": "textures/capes/moonlightTrail/texture",
         "crafter_cape": "textures/capes/crafter/texture",
+        "aurora_cape": "textures/capes/aurora/texture",
+        "hero_cape": "textures/capes/hero/texture",
+        "twisted_cape": "textures/capes/twisted/texture",
+        "snowgolem_cape": "textures/capes/snowgolem/texture",
         "translator_cape": "textures/capes/crowdinTranslator/texture",
         "cn_translator_cape": "textures/capes/chineseTranslator/texture",
         "moderator_cape": "textures/capes/bugTracker/texture",
@@ -1429,7 +1465,7 @@ function capeRarityIdentifier() {
 
 ////// CAPES UI (Constants.js) //////
 function capeUI() {
-  const capes = customCapesList2;
+  const capes = vanillaCapesList;
   const capeID = capes[0].type.replace(/:\S+/g, ':');
   function elytraSubstitute(cape) {
     if (!containsMatch(cape.type.replace(capeID, ''), capeNoElytra))
@@ -1491,7 +1527,7 @@ function itemIDs() {
 }
 
 ////// JSON ONE LINE FORMATTER //////
-const json1 = readFileSync("./vanilla.player.json", { encoding: 'utf8' });
+const json1 = readFileSync("./vanilla.player.entity.json", { encoding: 'utf8' });
 function jsonFormatter() {
   let json2 = JSON.parse(json1);
   console.log(JSON.stringify(json2, null, 2));

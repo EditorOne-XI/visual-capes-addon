@@ -1,18 +1,18 @@
 {
   "format_version": 2,
   "header": {
-    "description": "Made by EditorOne5312 - v2.6.0 - Note: This Resource Pack doesn't support utility packs, cosmetics packs, packs that uses 'player.entity.json' file, packs that modifies cape & elytra rendering. If you really want to merge this pack then do it manually.",
+    "description": "Made by EditorOne5312 - v2.7.0 - Note: This Resource Pack doesn't support utility packs, cosmetics packs, packs that uses 'player.entity.json' file, packs that modifies cape & elytra rendering. If you really want to merge this pack then do it manually.",
     "name": "§bVisual Capes Addon §9RP§r",
     "uuid": "676fbaf7-29f0-4210-8f91-c9804d1eeae2",
     "pack_scope": "world",
-    "version": [ 2, 6, 0 ],
+    "version": [ 2, 7, 0 ],
     "min_engine_version": [ 1, 26, 30 ]
   },
   "modules": [
     {
       "type": "resources",
       "uuid": "2629b0d6-6925-4dcf-99b8-efa1f2468204",
-      "version": [ 2, 6, 0 ]
+      "version": [ 2, 7, 0 ]
     }
   ],
   "subpacks": [
@@ -37,7 +37,7 @@
   "dependencies": [
     {
       "uuid": "90b53ed4-a651-4fff-bfb6-48f5734b6cb2",
-      "version": [ 2, 6, 0 ]
+      "version": [ 2, 7, 0 ]
     }
   ],
   "metadata": {

@@ -757,8 +757,56 @@
         "Texture.enchanted"
       ]
     },
-    "controller.render.minecon2011_cape.elytra": {
+    "controller.render.aurora_cape.elytra": {
       "geometry": "query.mark_variant == 19 ? Geometry.default : Geometry.none",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
+        }
+      ],
+      "textures": [
+        "!query.has_cape ? Texture.aurora_cape : Texture.default",
+        "Texture.enchanted"
+      ]
+    },
+    "controller.render.hero_cape.elytra": {
+      "geometry": "query.mark_variant == 20 ? Geometry.default : Geometry.none",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
+        }
+      ],
+      "textures": [
+        "!query.has_cape ? Texture.hero_cape : Texture.default",
+        "Texture.enchanted"
+      ]
+    },
+    "controller.render.twisted_cape.elytra": {
+      "geometry": "query.mark_variant == 21 ? Geometry.default : Geometry.none",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
+        }
+      ],
+      "textures": [
+        "!query.has_cape ? Texture.twisted_cape : Texture.default",
+        "Texture.enchanted"
+      ]
+    },
+    "controller.render.snowgolem_cape.elytra": {
+      "geometry": "query.mark_variant == 22 ? Geometry.default : Geometry.none",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
+        }
+      ],
+      "textures": [
+        "!query.has_cape ? Texture.snowgolem_cape : Texture.default",
+        "Texture.enchanted"
+      ]
+    },
+    "controller.render.minecon2011_cape.elytra": {
+      "geometry": "query.mark_variant == 23 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -770,7 +818,7 @@
       ]
     },
     "controller.render.minecon2012_cape.elytra": {
-      "geometry": "query.mark_variant == 20 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 24 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -782,7 +830,7 @@
       ]
     },
     "controller.render.minecon2013_cape.elytra": {
-      "geometry": "query.mark_variant == 21 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 25 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -794,7 +842,7 @@
       ]
     },
     "controller.render.minecon2015_cape.elytra": {
-      "geometry": "query.mark_variant == 22 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 26 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -806,7 +854,7 @@
       ]
     },
     "controller.render.minecon2016_cape.elytra": {
-      "geometry": "query.mark_variant == 23 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 27 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -818,7 +866,7 @@
       ]
     },
     "controller.render.mc_experience_cape.elytra": {
-      "geometry": "query.mark_variant == 24 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 28 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -830,7 +878,7 @@
       ]
     },
     "controller.render.moonlight_trail_cape.elytra": {
-      "geometry": "query.mark_variant == 25 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 29 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -842,7 +890,7 @@
       ]
     },
     "controller.render.crafter_cape.elytra": {
-      "geometry": "query.mark_variant == 26 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 30 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -854,7 +902,7 @@
       ]
     },
     "controller.render.translator_cape.elytra": {
-      "geometry": "query.mark_variant == 27 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 31 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -866,7 +914,7 @@
       ]
     },
     "controller.render.cn_translator_cape.elytra": {
-      "geometry": "query.mark_variant == 28 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 32 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -878,7 +926,7 @@
       ]
     },
     "controller.render.moderator_cape.elytra": {
-      "geometry": "query.mark_variant == 29 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 33 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -890,7 +938,7 @@
       ]
     },
     "controller.render.mapmaker_cape.elytra": {
-      "geometry": "query.mark_variant == 30 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 34 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -902,7 +950,7 @@
       ]
     },
     "controller.render.scrolls_champion_cape.elytra": {
-      "geometry": "query.mark_variant == 31 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 35 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -914,7 +962,7 @@
       ]
     },
     "controller.render.cobalt_cape.elytra": {
-      "geometry": "query.mark_variant == 32 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 36 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -926,7 +974,7 @@
       ]
     },
     "controller.render.bacon_cape.elytra": {
-      "geometry": "query.mark_variant == 33 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 37 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -938,7 +986,7 @@
       ]
     },
     "controller.render.millionthsale_cape.elytra": {
-      "geometry": "query.mark_variant == 34 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 38 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -950,7 +998,7 @@
       ]
     },
     "controller.render.dannybstyle_cape.elytra": {
-      "geometry": "query.mark_variant == 35 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 39 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -962,7 +1010,7 @@
       ]
     },
     "controller.render.snowman_cape.elytra": {
-      "geometry": "query.mark_variant == 36 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 40 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -974,7 +1022,7 @@
       ]
     },
     "controller.render.cheapsh0t_cape.elytra": {
-      "geometry": "query.mark_variant == 37 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 41 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -986,7 +1034,7 @@
       ]
     },
     "controller.render.spade_cape.elytra": {
-      "geometry": "query.mark_variant == 38 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 42 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -998,7 +1046,7 @@
       ]
     },
     "controller.render.prismarine_cape.elytra": {
-      "geometry": "query.mark_variant == 39 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 43 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -1010,7 +1058,7 @@
       ]
     },
     "controller.render.turtle_cape.elytra": {
-      "geometry": "query.mark_variant == 40 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 44 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -1022,7 +1070,7 @@
       ]
     },
     "controller.render.birthday_cape.elytra": {
-      "geometry": "query.mark_variant == 41 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 45 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -1034,7 +1082,7 @@
       ]
     },
     "controller.render.valentine_cape.elytra": {
-      "geometry": "query.mark_variant == 42 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 46 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -1046,7 +1094,7 @@
       ]
     },
     "controller.render.oxeye_cape.elytra": {
-      "geometry": "query.mark_variant == 43 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 47 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -1058,7 +1106,7 @@
       ]
     },
     "controller.render.blueprint_cape.elytra": {
-      "geometry": "query.mark_variant == 44 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 48 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -1070,7 +1118,7 @@
       ]
     },
     "controller.render.mojang_cape1.elytra": {
-      "geometry": "query.mark_variant == 45 ? Geometry.default : Geometry.none",
+      "geometry": "query.mark_variant == 49 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"
@@ -1082,54 +1130,6 @@
       ]
     },
     "controller.render.xbox360_cape.elytra": {
-      "geometry": "query.mark_variant == 46 ? Geometry.default : Geometry.none",
-      "materials": [
-        {
-          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
-        }
-      ],
-      "textures": [
-        "Texture.default",
-        "Texture.enchanted"
-      ]
-    },
-    "controller.render.fj_studios_cape.elytra": {
-      "geometry": "query.mark_variant == 47 ? Geometry.default : Geometry.none",
-      "materials": [
-        {
-          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
-        }
-      ],
-      "textures": [
-        "Texture.default",
-        "Texture.enchanted"
-      ]
-    },
-    "controller.render.mojang_cape2.elytra": {
-      "geometry": "query.mark_variant == 48 ? Geometry.default : Geometry.none",
-      "materials": [
-        {
-          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
-        }
-      ],
-      "textures": [
-        "!query.has_cape ? Texture.mojang_cape2 : Texture.default",
-        "Texture.enchanted"
-      ]
-    },
-    "controller.render.mojang_studios_cape.elytra": {
-      "geometry": "query.mark_variant == 49 ? Geometry.default : Geometry.none",
-      "materials": [
-        {
-          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
-        }
-      ],
-      "textures": [
-        "!query.has_cape ? Texture.mojang_studios_cape : Texture.default",
-        "Texture.enchanted"
-      ]
-    },
-    "controller.render.christmas2010_cape.elytra": {
       "geometry": "query.mark_variant == 50 ? Geometry.default : Geometry.none",
       "materials": [
         {
@@ -1141,7 +1141,7 @@
         "Texture.enchanted"
       ]
     },
-    "controller.render.ny2011_cape.elytra": {
+    "controller.render.fj_studios_cape.elytra": {
       "geometry": "query.mark_variant == 51 ? Geometry.default : Geometry.none",
       "materials": [
         {
@@ -1153,8 +1153,56 @@
         "Texture.enchanted"
       ]
     },
-    "controller.render.xbox360_1st_birthday_cape.elytra": {
+    "controller.render.mojang_cape2.elytra": {
       "geometry": "query.mark_variant == 52 ? Geometry.default : Geometry.none",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
+        }
+      ],
+      "textures": [
+        "!query.has_cape ? Texture.mojang_cape2 : Texture.default",
+        "Texture.enchanted"
+      ]
+    },
+    "controller.render.mojang_studios_cape.elytra": {
+      "geometry": "query.mark_variant == 53 ? Geometry.default : Geometry.none",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
+        }
+      ],
+      "textures": [
+        "!query.has_cape ? Texture.mojang_studios_cape : Texture.default",
+        "Texture.enchanted"
+      ]
+    },
+    "controller.render.christmas2010_cape.elytra": {
+      "geometry": "query.mark_variant == 54 ? Geometry.default : Geometry.none",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default",
+        "Texture.enchanted"
+      ]
+    },
+    "controller.render.ny2011_cape.elytra": {
+      "geometry": "query.mark_variant == 55 ? Geometry.default : Geometry.none",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? Material.enchanted : Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default",
+        "Texture.enchanted"
+      ]
+    },
+    "controller.render.xbox360_1st_birthday_cape.elytra": {
+      "geometry": "query.mark_variant == 56 ? Geometry.default : Geometry.none",
       "materials": [
         {
           "*": "variable.is_enchanted ? Material.enchanted : Material.default"

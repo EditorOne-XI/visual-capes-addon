@@ -1,5 +1,5 @@
 {
-  "format_version": "beta",
+  "format_version": "1.26.30",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:player",
@@ -56,10 +56,7 @@
         "walk": 0
       },
       "minecraft:experience_reward": {
-        "on_death": {
-          "expression": "Math.Min(query.player_level * 7, 100)",
-          "version": 13
-        }
+        "on_death": "Math.Min(query.player_level * 7, 100)"
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -118,9 +115,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "bouncy"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.105,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -129,9 +130,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "regular"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.105,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -140,9 +145,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "slow_bouncy"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.24,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -151,9 +160,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "slow_flat"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.105,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -162,9 +175,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "fast_flat"
             },
-            "horizontal_power": 0.9125,
+            "horizontal_power": 0.365,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -173,9 +190,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "light"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.18,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -184,9 +205,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "fast_sliding"
             },
-            "horizontal_power": 0.6625,
+            "horizontal_power": 0.265,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -195,9 +220,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "slow_sliding"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -206,9 +235,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "sticky"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -217,9 +250,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "high_resistance"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -228,9 +265,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "explosive"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.09,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           },
           {
             "filter": {
@@ -239,9 +280,13 @@
               "domain": "minecraft:sulfur_cube_archetype",
               "value": "hot"
             },
-            "horizontal_power": 0.4125,
+            "horizontal_power": 0.165,
             "vertical_power": 0.105,
-            "vertical_velocity_cap": 8
+            "vertical_velocity_cap": 8,
+            "slowdown_scale": 1,
+            "scale_with_damage": true,
+            "knockback_mode": "hit_direction",
+            "extra_knockback_approach": "multiply_reduced"
           }
         ]
       },
